@@ -7,19 +7,108 @@
         justify-content: center;
         width: 99%;
     }
-    .headerFondo{
+    .imagenPrueba{
+        width: 200px;
+        height: auto;
+        
+    }
+    .doodle{
+        width: 101.3%;
+        height: 400px;
         margin: -10px;
+        margin-bottom: -240px;
+    }
+    .logo{
+        margin-top: -600px;
+        width: 300px;
+        height: auto;
+        padding-bottom: 40px;
+    }
+    .letra_img{
+        width: 50px;
+        height: 50px;
     }
 }
 
-/* Teléfono */
-@media (max-width: 768px){
+/* Tablet */
+@media (max-width: 991px){
     .scene{
         display:flex;
         flex-direction: column;
         justify-content: center;
         width: 99%;
     }
+    .imagenPrueba{
+        width: 300px;
+        height: auto;
+        
+    }
+    .logo{
+        margin-top: -600px;
+        width: 300px;
+        height: auto;
+        padding-bottom: 70px;
+    }
+    h2{
+        font-size:xx-large;
+    }
+    p{
+        font-size: x-large;
+    }
+    .doodle{
+        width: 103%;
+        height: 400px;
+        margin: -10px;
+        margin-bottom: -200px;
+    }
+    .letra_img{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Teléfono */
+@media (max-width: 767px){
+    .scene{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 99%;
+    }
+    .imagenPrueba{
+        width: 400px;
+        height: auto;
+        
+    }
+    h2{
+        font-size:xx-large;
+    }
+    p{
+        font-size: x-large;
+    }
+    .doodle{
+        width: 108%;
+        height: 400px;
+        margin: -10px;
+        margin-bottom: -200px;
+    }
+    .letra_img{
+        width: 50px;
+        height: 50px;
+    }
+    .logo{
+        margin-top: -600px;
+        
+        width: 300px;
+        height: auto;
+        padding-bottom: 70px;
+        
+        
+    }
+    .navigation{
+        text-align: center;
+    }
+    
 }
 .titleInstructions{
     text-align: center;
@@ -51,12 +140,9 @@
 
 }
 
-.imagenPrueba{
-    width: 200px;
-    height: 400px;
-    
-}
-.letra_img{
-    width: 40px;
-    height: 40px;
+
+
+
+body{
+    font-family: sans-serif;
 }
