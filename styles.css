@@ -13,6 +13,7 @@
         
     }
     .doodle{
+
         width: 101.3%;
         height: 400px;
         margin: -10px;
@@ -23,11 +24,55 @@
         width: 300px;
         height: auto;
         padding-bottom: 40px;
+        padding-left: 50px;
     }
     .letra_img{
         width: 50px;
         height: 50px;
     }
+    
+    .section {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+
+
+        text-align: center;
+    }
+
+    .section.active {
+        display:flex;
+        flex-direction: column;
+        
+        
+    }
+    .dots {
+        display: flex;
+    }
+    
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .dot.active {
+        background-color: #717171;
+    }
+    .carousel {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100vh;
+    }
+    
 }
 
 /* Tablet */
@@ -109,9 +154,55 @@
         text-align: center;
     }
     
+    .section {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+
+
+        text-align: center;
+    }
+
+    .section.active {
+        display:flex;
+        flex-direction: column;
+        
+        
+    }
+    .carousel {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 290vh;
+    }
+    .dots {
+        display: flex;
+        position: relative;
+    }
+
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background-color: #717171;
+    }
+        
 }
 .titleInstructions{
     text-align: center;
+    display: block;
 }
 .actividad{
     display:flex;
@@ -120,7 +211,7 @@
 .escena{
     display:flex;
     flex-direction: row;
- 
+    
     justify-content: center;
 
     margin: 0 30px;
@@ -145,4 +236,77 @@
 
 body{
     font-family: sans-serif;
+}
+
+
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+ .caroseli {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+.character{
+    justify-content: end;
+    width: 50px;
+    height: auto;
+    margin: auto;
+}
+.container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.container span {
+    font-size: 1.5em;
+}
+
+.vertical-container{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.vertical-container button{
+    text-align: center;
+    margin: 50px auto;
+    width: 80px;
+}
+
+/* Aqui empieza lo del primer acomodar letras */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#letter-buttons, #spaces, #spaces1, #spaces2, #spaces3,#spaces4,#spaces5 {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.space{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-size: 1em;
 }
