@@ -198,7 +198,20 @@
     .dot.active {
         background-color: #717171;
     }
-        
+    .vertical-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .container {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .character{
+        margin-left: auto;
+    }
 }
 .titleInstructions{
     text-align: center;
@@ -257,7 +270,7 @@ body{
     justify-content: end;
     width: 50px;
     height: auto;
-    margin: auto;
+    margin-left: auto;
 }
 .container {
     width: 90%;
@@ -268,9 +281,11 @@ body{
 .container span {
     font-size: 1.5em;
 }
-
+.input{
+    margin: 5px;
+}
 .vertical-container{
-    width: fit-content;
+    width: 50%;
     display: flex;
     flex-direction: column;
 }
