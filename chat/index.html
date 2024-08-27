@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Nuevos Vecinos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mis Nuevos Vecinos</h1>
+    </header>
+    <main>
+        <!-- Ejercicio 1: Conociéndonos entre vecinos -->
+        <section class="exercise" id="exercise1">
+            <h2>Conociéndonos entre vecinos</h2>
+            <p>Observa a los personajes y practica sus nombres.</p>
+            <div class="characters">
+                <img src="teresa.jpg" alt="Teresa">
+                <img src="pablo.jpg" alt="Pablo">
+                <img src="elena.jpg" alt="Elena">
+            </div>
+        </section>
+        
+        <!-- Ejercicio 2: Ordena las letras -->
+        <section class="exercise" id="exercise2">
+            <h2>Ordena las letras de cada nombre</h2>
+            <div class="puzzle">
+                <p id="puzzle1">e i r J a v a E n l e í a M r a</p>
+                <input type="text" id="answer1" placeholder="Escribe el nombre aquí">
+            </div>
+            <div class="puzzle">
+                <p id="puzzle2">a D n a i l s o r C a</p>
+                <input type="text" id="answer2" placeholder="Escribe el nombre aquí">
+            </div>
+            <button onclick="checkAnswers()">Verificar</button>
+            <div id="result"></div>
+        </section>
+        
+        <!-- Ejercicio 3: Yo soy... -->
+        <section class="exercise" id="exercise3">
+            <h2>Yo soy...</h2>
+            <p>Observa y practica la forma “yo soy…” para presentarte.</p>
+            <div class="presentation">
+                <p>Yo <input type="text" id="input1"> Teresa</p>
+                <p>Yo soy <input type="text" id="input2"></p>
+                <p><input type="text" id="input3"> soy Pablo</p>
+            </div>
+            <button onclick="checkPresentations()">Verificar</button>
+            <div id="resultPresentation"></div>
+        </section>
+        
+        <!-- Más secciones según sea necesario -->
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

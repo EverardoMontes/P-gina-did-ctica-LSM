@@ -1,0 +1,70 @@
+
+/* Escritorio */
+@media (min-width: 991px){
+    .scene{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 99%;
+    }
+    .headerFondo{
+        margin: -10px;
+    }
+}
+
+/* Teléfono */
+@media (max-width: 768px){
+    .scene{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 99%;
+    }
+}
+.titleInstructions{
+    text-align: center;
+}
+.actividad{
+    display:flex;
+    justify-content: center;
+}
+.escena{
+    display:flex;
+    flex-direction: row;
+ 
+    justify-content: center;
+
+    margin: 0 30px;
+    
+}
+
+.img_Act .letras{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.item-letra{
+    margin: 0 5px;
+    
+
+}
+
+.imagenPrueba{
+    width: 200px;
+    height: 400px;
+    
+}
+.letra_img{
+    width: 40px;
+    height: 40px;
+}
+
+.doodle{
+    width: 100%;
+    height: 200px;
+}
+body{
+    font-family: sans-serif;
+}
