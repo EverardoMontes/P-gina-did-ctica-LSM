@@ -5,6 +5,7 @@
         display:flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
         width: 99%;
     }
     .imagenPrueba{
@@ -33,7 +34,7 @@
     
     .section {
         display: none;
-        position: absolute;
+        position: relative;
         width: 100%;
         height: 100%;
         justify-content: center;
@@ -57,20 +58,20 @@
         height: 15px;
         width: 15px;
         margin: 0 5px;
-        background-color: #bbb;
+        background-color: #000000;
         border-radius: 50%;
         display: inline-block;
         cursor: pointer;
     }
     
     .dot.active {
-        background-color: #717171;
+        background-color: #2CB7B3;
     }
     .carousel {
         position: relative;
         overflow: hidden;
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
     }
     
 }
@@ -80,7 +81,7 @@
     .scene{
         display:flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
         width: 99%;
     }
     .imagenPrueba{
@@ -173,11 +174,11 @@
         
     }
     .carousel {
-        display: block;
+   
         position: relative;
         overflow: hidden;
         width: 100%;
-        height: 290vh;
+        min-height: 100vh;
     }
     .dots {
         display: flex;
@@ -224,9 +225,9 @@
 .escena{
     display:flex;
     flex-direction: row;
-    
+    height: auto;
     justify-content: center;
-
+    margin-bottom: 20px;
     margin: 0 30px;
     
 }
@@ -249,11 +250,13 @@
 
 body{
     font-family: sans-serif;
+    min-height: 100%;
 }
 
 
 
 .controls {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -282,7 +285,13 @@ body{
     font-size: 1.5em;
 }
 .input{
+    text-align: center;
+    width: 80px;
     margin: 5px;
+    border: none;
+    border-bottom: 2px solid #000;
+    background: none;
+    font-size: 1.5em
 }
 .vertical-container{
     width: 50%;
@@ -292,7 +301,7 @@ body{
 .vertical-container button{
     text-align: center;
     margin: 50px auto;
-    width: 80px;
+    width: fit-content;
 }
 
 /* Aqui empieza lo del primer acomodar letras */
@@ -301,27 +310,44 @@ body{
     flex-direction: column;
     align-items: center;
 }
-
-#letter-buttons, #spaces, #spaces1, #spaces2, #spaces3,#spaces4,#spaces5 {
-    margin: 10px;
-    display: flex;
-    flex-direction: row;
-}
-
 button {
     margin: 5px;
     padding: 10px;
     font-size: 1em;
     cursor: pointer;
+    background-color: #EFEFEF;
+    border: solid 1px #2CB7B3;
+    border-radius: 2em;
+    width: fit-content;
 }
+
+#letter-buttons, #spaces, #spaces1, #spaces2, #spaces3,#spaces4,#spaces5 {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    background: none;
+}
+
 
 .space{
     width: 30px;
     height: 30px;
-    border: 1px solid #000;
+    border: none;
+    border-bottom: 2px solid #000;
+    background: none;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 5px;
     font-size: 1em;
+}
+.correct{
+    color:#2CB7B3;
+    border: none;
+
+}
+.resultados{
+    display: flex;
+    justify-content: center;
 }
