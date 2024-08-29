@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     showSection(currentIndex);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
     });
   }
 
