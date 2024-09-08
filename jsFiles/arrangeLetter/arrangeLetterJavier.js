@@ -1,13 +1,10 @@
-// scripts.js
 document.addEventListener('DOMContentLoaded', () => {
     const name = "Javier";
-    const shuffledName = shuffle(name.split('')).join('');
+    let shuffledName = shuffle(name.split('')).join('');
     const letterButtonsContainer = document.getElementById('letter-buttons1');
     const spacesContainer = document.getElementById('spaces1');
     const resetButton = document.getElementById('reset1');
-    
-    let selectedLetter = null;
-    let selectedSpace = null;
+    let spaces = [];
 
     // Función para barajar un array
     function shuffle(array) {
@@ -18,67 +15,42 @@ document.addEventListener('DOMContentLoaded', () => {
         return array;
     }
 
-    // Crear botones de letras desordenadas
-    shuffledName.split('').forEach(letter => {
-        const button = document.createElement('button');
-        button.textContent = letter;
-        button.addEventListener('click', () => {
-            selectedLetter = button;
-        });
-        letterButtonsContainer.appendChild(button);
-    });
-
-    // Crear espacios para las letras ordenadas
-    for (let i = 0; i < name.length; i++) {
-        const space = document.createElement('div');
-        space.classList.add('space');
-        space.addEventListener('click', () => {
-            if (selectedLetter) {
-                space.textContent = selectedLetter.textContent;
-                selectedLetter.disabled = true;
-                selectedLetter = null;
-            }
-        });
-        spacesContainer.appendChild(space);
-    }
-
-    // Reiniciar el juego
-    resetButton.addEventListener('click', () => {
-        letterButtonsContainer.innerHTML = '';
-        spacesContainer.innerHTML = '';
-        selectedLetter = null;
-        selectedSpace = null;
-        init();
-    });
-
+    // Inicializar el juego
     function init() {
+        letterButtonsContainer.innerHTML = ''; // Limpiar contenedor de botones
+        spacesContainer.innerHTML = ''; // Limpiar contenedor de espacios
+        spaces = []; // Resetear array de espacios
+        shuffledName = shuffle(name.split('')).join(''); // Re-barajar el nombre
+
+        // Crear espacios para las letras ordenadas
+        for (let i = 0; i < name.length; i++) {
+            const space = document.createElement('div');
+            space.classList.add('space');
+            spaces.push(space);
+            spacesContainer.appendChild(space);
+        }
+
+        // Crear botones de letras desordenadas
         shuffledName.split('').forEach(letter => {
             const button = document.createElement('button');
             button.textContent = letter;
             button.addEventListener('click', () => {
-                selectedLetter = button;
+                // Encuentra el primer espacio disponible
+                const firstEmptySpace = spaces.find(space => !space.textContent);
+                if (firstEmptySpace) {
+                    firstEmptySpace.textContent = button.textContent;
+                    button.disabled = true; // Deshabilitar el botón
+                }
             });
             letterButtonsContainer.appendChild(button);
         });
-
-        for (let i = 0; i < name.length; i++) {
-            const space = document.createElement('div');
-            space.classList.add('space');
-            space.addEventListener('click', () => {
-                if (selectedLetter) {
-                    space.textContent = selectedLetter.textContent;
-                    selectedLetter.disabled = true;
-                    selectedLetter = null;
-                }
-            });
-            spacesContainer.appendChild(space);
-        }
     }
 
-    // Inicializar el juego
-    letterButtonsContainer.innerHTML = '';
-        spacesContainer.innerHTML = '';
-        selectedLetter = null;
-        selectedSpace = null;
-        init();
+    // Reiniciar el juego al hacer clic en el botón de reinicio
+    resetButton.addEventListener('click', () => {
+        init(); // Reiniciar todo llamando a init()
+    });
+
+    // Llamar a init() al cargar la página por primera vez
+    init();
 });
