@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Crear botones de letras desordenadas
+        let dragbtnnumber = 1
         shuffledName.split('').forEach(letter => {
             const button = document.createElement('button');
             button.textContent = letter;
@@ -42,8 +43,30 @@ document.addEventListener('DOMContentLoaded', () => {
                     button.disabled = true; // Deshabilitar el botón
                 }
             });
+            button.setAttribute('draggable', true);
+            button.className = "dragButton"+dragbtnnumber.toString()
             letterButtonsContainer.appendChild(button);
+            dragbtnnumber+=1
         });
+
+        //Drag n drop de los botones
+        letterButtonsContainer.childNodes.forEach(letter => {
+            letter.addEventListener("dragstart", (e)=> {
+                let selected = e.target;
+                spacesContainer.childNodes.forEach(space => {
+                    space.addEventListener("dragover", (e)=> {
+                        e.preventDefault();
+                    });
+                    space.addEventListener("drop", (e)=>{
+                        space.textContent = selected.textContent
+                        selected.disabled = true
+                        selected = null;
+                    });
+                })
+
+               
+            })
+        })
     }
 
     // Reiniciar el juego al hacer clic en el botón de reinicio

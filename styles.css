@@ -437,13 +437,14 @@ button {
     font-family: 'Mulish', sans-serif;
 }
 
-#letter-buttons, #spaces, #spaces1, #spaces2, #spaces3,#spaces4,#spaces5 {
+#letter-buttons1, #letter-buttons2,#letter-buttons3,#letter-buttons4,#letter-buttons5, #spaces, #spaces1, #spaces2, #spaces3,#spaces4,#spaces5 {
     margin: 10px;
     display: flex;
     flex-direction: row;
     border: none;
     background: none;
     font-family: 'Mulish', sans-serif;
+    
 }
 
 
