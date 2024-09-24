@@ -12,11 +12,11 @@ function desactivar(div, palabra) {
             div.parentNode.lastChild.previousSibling.disabled = true;
         }
         div.setAttribute("class", "correct");
-
+        return 1
     }
     else {
         console.log("error")
-        return
+        return 0
     }
 }
 function verificarAcomodo() {
@@ -28,9 +28,13 @@ function verificarAcomodo() {
     let carlos = document.getElementById("spaces5")
     let array = [javier, elena, maria, diana, carlos];
     let palabras = ["Javier", "Elena", "Maria", "Diana", "Carlos"]
+    let contador = 0
     for (let i = 0; i <= array.length-1; i++){
-        desactivar(array[i], palabras[i]);
+        contador+= desactivar(array[i], palabras[i]);
     }
+    let resultado = document.getElementById("resultadosSec2")
+    console.log("contadoooo", contador.toString())
+    resultado.innerHTML= "Respuestas correctas: "+contador +" de 6"
 }
 
 
