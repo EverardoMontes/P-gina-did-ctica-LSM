@@ -1,518 +1,432 @@
 /* Escritorio */
-@media (min-width: 991px){
-    body{
-        font-family: 'Mulish';
-        font-weight: normal;
-    }
-    .scene{
-        display:flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 99%;
-    }
-    .imagenPrueba{
-        width: 200px;
-        height: auto;
-        
-    }
-    .doodle{
-
-        width: 101.3%;
-        height: 400px;
-        margin: -10px;
-        margin-bottom: -240px;
-    }
-    .logo{
-        margin-top: -600px;
-        width: 300px;
-        height: auto;
-        padding-bottom: 40px;
-        padding-left: 50px;
-    }
-    .letra_img{
-        width: 50px;
-        height: 50px;
-    }
-    
-    .section {
-        display: none;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-
-
-        text-align: center;
-    }
-
-    .section.active {
-        display:flex;
-        flex-direction: column;
-        
-        
-    }
-    .dots {
-        display: flex;
-    }
-    
-    .dot {
-        height: 15px;
-        width: 15px;
-        margin: 0 5px;
-        background-color: #000000;
-        border-radius: 50%;
-        display: inline-block;
-        cursor: pointer;
-    }
-    
-    .dot.active {
-        background-color: #2CB7B3;
-    }
-    .carousel {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        min-height: 100vh;
-    }
-    .game-board {
-        display: grid;
-        grid-template-columns: repeat(2, 200px); /* Dos columnas */
-        grid-gap: 50px;
-        justify-content: center;
-    }
-    
-    .card {
-        width: 200px;
-        height: 150px;
-        background-color: #3498db; /* Reverso uniforme para todas las cartas */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        color: white;
-        cursor: pointer;
-        border-radius: 10px;
-        user-select: none;
-        transition: transform 0.3s;
-        text-align: center;
-        padding: 10px;
-    }
-    
-    .card img {
-        max-width: 100%;
-        max-height: 100%;
-        display: none;
-    }
-    
-    .card.flipped img {
-        display: block;
-    }
-    
-    .card.flipped {
-        background-color: #2ecc71; /* Color al ser volteada */
-    }
-    
-    .card.matched {
-        background-color: #95a5a6;
-        cursor: default;
-    }
-    
-    
+body {
+  font-family: "Mulish";
+  font-weight: normal;
 }
-
-/* Tablet */
-@media (max-width: 991px){
-    body{
-        font-family: 'Mulish', sans-serif;
-    }
-    .scene{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        width: 99%;
-    }
-    .imagenPrueba{
-        width: 300px;
-        height: auto;
-        
-    }
-    .logo{
-        margin-top: -600px;
-        width: 300px;
-        height: auto;
-        padding-bottom: 70px;
-    }
-    h2{
-        font-size:xx-large;
-    }
-    p{
-        font-size: x-large;
-    }
-    .doodle{
-        width: 103%;
-        height: 400px;
-        margin: -10px;
-        margin-bottom: -200px;
-    }
-    .letra_img{
-        width: 80px;
-        height: 80px;
-    }
-    .game-board {
-        display: grid;
-        grid-template-columns: repeat(2, 200px); /* Dos columnas */
-        grid-gap: 50px;
-        justify-content: center;
-    }
-    
-    .card {
-        width: 200px;
-        height: 150px;
-        background-color: #3498db; /* Reverso uniforme para todas las cartas */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        color: white;
-        cursor: pointer;
-        border-radius: 10px;
-        user-select: none;
-        transition: transform 0.3s;
-        text-align: center;
-        padding: 10px;
-    }
-    
-    .card img {
-        max-width: 100%;
-        max-height: 100%;
-        display: none;
-    }
-    
-    .card.flipped img {
-        display: block;
-    }
-    
-    .card.flipped {
-        background-color: #2ecc71; /* Color al ser volteada */
-    }
-    
-    .card.matched {
-        background-color: #95a5a6;
-        cursor: default;
-    }
-    
+iframe {
+  max-width: 100%;
 }
-
-/* Teléfono */
-@media (max-width: 767px){
-    body{
-        font-family: 'Mulish', sans-serif;
-    }
-    .scene{
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 99%;
-    }
-    .imagenPrueba{
-        width: 400px;
-        height: auto;
-        
-    }
-    h2{
-        font-size:xx-large;
-    }
-    p{
-        font-size: x-large;
-    }
-    .doodle{
-        width: 108%;
-        height: 400px;
-        margin: -10px;
-        margin-bottom: -200px;
-    }
-    .letra_img{
-        width: 50px;
-        height: 50px;
-    }
-    .logo{
-        margin-top: -600px;
-        
-        width: 300px;
-        height: auto;
-        padding-bottom: 70px;
-        
-        
-    }
-    .navigation{
-        text-align: center;
-    }
-    
-    .section {
-        display: none;
-        position: absolute;
-        width: 100%;
-        height: auto;
-        justify-content: center;
-        align-items: center;
-
-
-        text-align: center;
-    }
-
-    .section.active {
-        display:flex;
-        flex-direction: column;
-        
-        
-    }
-    .carousel {
-   
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        min-height: 100vh;
-    }
-    .dots {
-        display: flex;
-        position: relative;
-    }
-
-    .dot {
-        height: 15px;
-        width: 15px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-    }
-
-    .dot.active {
-        background-color: #717171;
-    }
-    .vertical-container{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    .container {
-        width: 90%;
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-    .character{
-        margin-left: auto;
-    }
-}
-.titleInstructions{
+@media (min-width: 1024px) {
+  .scene {
     display: flex;
-    text-align: center;
-    font-family: 'Mulish';
-    font-weight: normal;
-}
-
-.iconlsmbutton{
-    background: none;
-    border: 0px;
-    flex-wrap: wrap;
-
-}
-.iconlsmbutton img{
-    background: none;
-    border: 0px;
-    flex-wrap: wrap;
-    padding-top: 5px;
-    width: 56px;
-    height: 56px;
-}
-.actividad{
-    display:flex;
-    justify-content: center;
-}
-.escena{
-    display:flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+  }
+  .imagenPrueba {
+    width: 200px;
     height: auto;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin: 0 30px;
-    
-}
+  }
+  .doodle {
+    width: 101.3%;
+    height: 400px;
+    margin: -10px;
+    margin-bottom: -240px;
+  }
+  .logo {
+    margin-top: -600px;
+    width: 300px;
+    height: auto;
+    padding-bottom: 40px;
+    padding-left: 50px;
+  }
+  .letra_img {
+    width: 50px;
+    height: 50px;
+  }
 
-.img_Act .letras{
-    display:flex;
-    flex-direction: row;
+  .section {
+    display: none;
+    width: 100%;
+    height: 100%;
     justify-content: center;
-    
-}
+    align-items: center;
+    text-align: center;
+  }
 
-.item-letra{
+  .section.active {
+    display: flex;
+    flex-direction: column;
+  }
+  .dots {
+    display: flex;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
     margin: 0 5px;
-    
+    background-color: #000000;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
 
-}
-
-
-
-
-body{
-    font-family: 'Mulish', sans-serif;
-    min-height: 100%;
-}
-
-
-
-.controls {
+  .dot.active {
+    background-color: #2cb7b3;
+  }
+  .carousel {
     position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 200px); /* Cuatro columnas */
+    grid-gap: 50px;
+    justify-content: center;
+  }
+
+  .card {
+    width: 200px;
+    height: 150px;
+    background-color: #3498db; /* Reverso uniforme para todas las cartas */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    user-select: none;
+    transition: transform 0.3s;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .card img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+  }
+
+  .card.flipped img {
+    display: block;
+  }
+
+  .card.flipped {
+    background-color: #2ecc71; /* Color al ser volteada */
+  }
+
+  .card.matched {
+    background-color: #95a5a6;
+    cursor: default;
+  }
 }
 
- .caroseli {
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 1em;
+/* Tablet */
+@media screen and (max-width: 900px) {
+  .scene {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagenPrueba {
+    width: 300px;
+  }
+
+  .logo {
+    margin-top: -600px;
+    width: 300px;
+  }
+
+  h2 {
+    font-size: xx-large;
+  }
+
+  p {
+    font-size: x-large;
+  }
+
+  .doodle {
+    width: 103%;
+    height: 400px;
+    margin-bottom: -200px;
+  }
+
+  .letra_img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-gap: 50px;
+    justify-content: center;
+  }
+
+  .card {
+    width: 200px;
+    height: 150px;
+  }
 }
 
-.character{
-    justify-content: end;
-    width: 50px;
+/* Teléfono */
+@media screen and (max-width: 600px) {
+  .scene {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+  }
+  .imagenPrueba {
+    width: 400px;
     height: auto;
-    margin-left: auto;
-}
-.container {
+  }
+  h2 {
+    font-size: xx-large;
+  }
+  p {
+    font-size: x-large;
+  }
+  .doodle {
+    width: 108%;
+    height: 400px;
+    margin: -10px;
+    margin-bottom: -200px;
+  }
+  .letra_img {
+    width: 50px;
+    height: 50px;
+  }
+  .logo {
+    margin-top: -600px;
+    width: 300px;
+    height: auto;
+    padding-bottom: 70px;
+  }
+  .navigation {
+    text-align: center;
+  }
+
+  .section {
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section.active {
+    display: flex;
+    flex-direction: column;
+  }
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .dots {
+    display: flex;
+    position: center;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: #717171;
+  }
+  .vertical-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
     width: 90%;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+  }
+  .character {
+    margin-left: auto;
+    width: 50px;
+    height: auto;
+  }
 }
+
+.titleInstructions {
+  display: flex;
+  text-align: center;
+  font-family: "Mulish";
+  font-weight: normal;
+}
+
+.iconlsmbutton {
+  background: none;
+  border: 0px;
+  flex-wrap: wrap;
+}
+.iconlsmbutton img {
+  background: none;
+  border: 0px;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  width: 56px;
+  height: 56px;
+}
+.actividad {
+  display: flex;
+  justify-content: center;
+}
+.escena {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 30px;
+}
+
+.img_Act .letras {
+  display: flex;
+  justify-content: center;
+}
+
+.item-letra {
+  margin: 0 5px;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.character {
+  justify-content: end;
+  width: 50px;
+  height: auto;
+  margin-left: auto;
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .container span {
-    font-size: 1.5em;
-
-}
-.input{
-    text-align: center;
-    width: 80px;
-    margin: 5px;
-    border: none;
-    border-bottom: 2px solid #000;
-    background: none;
-    font-family: 'Mulish', sans-serif;
-    font-size: 1.5em;
-}
-.vertical-container{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-}
-.vertical-container button{
-    text-align: center;
-    margin: 50px auto;
-    width: fit-content;
+  font-size: 1.5em;
 }
 
-/* Aqui empieza lo del primer acomodar letras */
+.input {
+  text-align: center;
+  width: 80px;
+  margin: 5px;
+  border: none;
+  border-bottom: 2px solid #000;
+  background: none;
+  font-family: "Mulish";
+  font-size: 1.5em;
+}
+
+.vertical-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-container button {
+  text-align: center;
+  margin: 50px auto;
+  width: fit-content;
+}
+
 #game-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Mulish', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 button {
-    margin: 5px;
-    padding: 10px;
-    font-size: 1em;
-    cursor: pointer;
-    background-color: #EFEFEF;
-    border: solid 1px #2CB7B3;
-    border-radius: 2em;
-    width: fit-content;
-    font-family: 'Mulish', sans-serif;
+  margin: 5px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #efefef;
+  border: 1px solid #2cb7b3;
+  border-radius: 2em;
 }
 
-#letter-buttons1, #letter-buttons2,#letter-buttons3,#letter-buttons4,#letter-buttons5, #spaces, #spaces1, #spaces2, #spaces3,#spaces4,#spaces5 {
-    margin: 10px;
-    display: flex;
-    flex-direction: row;
-    border: none;
-    background: none;
-    font-family: 'Mulish', sans-serif;
-    
+#letter-buttons,
+#spaces,
+#spaces1,
+#spaces2,
+#spaces3,
+#spaces4,
+#spaces5 {
+  display: flex;
+  flex-direction: row;
+  background: none;
 }
 
-
-.space{
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-bottom: 2px solid #000;
-    background: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-    font-size: 1em;
-}
-.correct{
-    color:#2CB7B3;
-    border: none;
-
-}
-.resultados{
-    display: flex;
-    justify-content: center;
+.space {
+  width: 30px;
+  height: 30px;
+  border-bottom: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  font-size: 1em;
 }
 
-@font-face {
-    font-family: 'Mulish';
-    src:url('./fuentes/Mulish/Mulish-VariableFont_wght.ttf');
-    font-weight:normal;
-    font-style: normal;
+.correct {
+  color: #2cb7b3;
 }
 
+.resultados {
+  display: flex;
+  justify-content: center;
+}
 
-/* Aquí comienza el modal de instrucciones */
-
- /* Estilos para el modal */
- .modal {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    z-index: 1; /* Se coloca por encima de otros elementos */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1; /* Se coloca por encima de otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
 }
 
 /* Contenido del modal */
 .modal-content {
-    background-color: white;
-    margin: 15% auto; /* Centrar en la pantalla */
-    padding: 20px;
-    border: 1px solid #888;
-    width: auto; /* Ancho del modal */
-    max-width: 560px; /* Máximo ancho */
+  background-color: white;
+  margin: 15% auto; /* Centrar en la pantalla */
+  padding: 20px;
+  border: 1px solid #888;
+  width: auto; /* Ancho del modal */
+  max-width: 560px; /* Máximo ancho */
 }
-
-/* Botón para cerrar el modal */
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("./fuentes/Mulish/Mulish-VariableFont_wght.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
