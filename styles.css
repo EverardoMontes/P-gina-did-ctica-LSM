@@ -358,6 +358,8 @@ button {
   background-color: #efefef;
   border: 1px solid #2cb7b3;
   border-radius: 2em;
+  font-family: "Mulish";
+  font-weight: normal;
 }
 
 #letter-buttons,
