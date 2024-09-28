@@ -5,11 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let shuffledName = shuffle(name.split('')).join('');
     const letterButtonsContainer = document.getElementById('letter-buttons5');
     const spacesContainer = document.getElementById('spaces5');
-    const resetButton = document.getElementById('reset5');
     let spaces = [];
 
-    // Verificar si los elementos se están obteniendo correctamente
-    console.log(letterButtonsContainer, spacesContainer, resetButton);
 
     // Función para barajar un array
     function shuffle(array) {
@@ -49,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (firstEmptySpace) {
                     firstEmptySpace.textContent = button.textContent;
                     button.disabled = true; // Deshabilitar el botón
+                    quitarLetra(firstEmptySpace, button)
                 }
             });
             button.setAttribute('draggable', true);
@@ -56,6 +54,24 @@ document.addEventListener('DOMContentLoaded', () => {
             letterButtonsContainer.appendChild(button);
             dragbtnnumber+=1
         });
+
+
+        function quitarLetra(espacio, boton) {
+            espacio.addEventListener('click', function eventoQuitarLetra(){
+                console.log(boton.textContent + " ligado a " + espacio.textContent);
+                console.log(espacio);
+                espacio.textContent = "";
+                boton.disabled = false;
+            })
+            return;
+        }
+
+        function limpiarEventos(espacio) {
+            let old_element = espacio
+            let new_element = old_element.cloneNode(true);
+            old_element.parentNode.replaceChild(new_element, old_element);
+        }
+
 
         //Drag n drop de los botones
         letterButtonsContainer.childNodes.forEach(letter => {
@@ -68,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     space.addEventListener("drop", (e)=>{
                         space.textContent = selected.textContent
                         selected.disabled = true
+                        quitarLetra(space, selected)
                         selected = null;
                     });
                 })
@@ -79,10 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    // Reiniciar el juego al hacer clic en el botón de reinicio
-    resetButton.addEventListener('click', () => {
-        init(); // Reiniciar todo llamando a init()
-    });
+    
 
     // Llamar a init() al cargar la página por primera vez
     init();
