@@ -1,6 +1,8 @@
+
+
 var modal = document.getElementById("verificarR");
 var btn = document.getElementById("verificarRespuestas1");
-var span = document.getElementsByClassName("close")[1];
+var span = document.getElementById("span2");
 
 // Al hacer clic en el botón, mostrar el modal
 btn.onclick = function() {
