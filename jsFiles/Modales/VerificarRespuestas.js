@@ -1,11 +1,11 @@
-var modal = document.getElementById("Titulo1Modal");
-var btn = document.getElementById("Titulo1ModalBtn");
-var span = document.getElementsByClassName("close")[0];
+var modal = document.getElementById("verificarR");
+var btn = document.getElementById("verificarRespuestas1");
+var span = document.getElementsByClassName("close")[1];
 
 // Al hacer clic en el botón, mostrar el modal
 btn.onclick = function() {
     modal.style.display = "block";
-    
+    console.log("Entré")
 }
 
 // Al hacer clic en la "X", cerrar el modal

@@ -28,6 +28,7 @@
           allowfullscreen
         ></iframe>
       </div>
+      
     </div>
     <div class="carousel">
       <div class="section" id="section1">
@@ -217,7 +218,9 @@
           </button>
         </div>
         <div class="scene">
+          
           <div class="escena">
+            
             <div class="img_Act">
               <div class="actividad">
                 <img
@@ -323,11 +326,24 @@
             </div>
           </div>
         </div>
+        
         <br />
+        
         <div>
-          <button onclick="verificarAcomodo()">Verificar respuestas</button>
+          
+          <div class="titleInstructions">
+            <button onclick="verificarAcomodo()">Verificar respuestas</button>
+            <button class="iconlsmbutton verificar" id="verificarRespuestas1">
+              <img
+                src="./imgs/manitas.png"
+                alt="Icono clickeable para traducción a lengua de señas mexicana"
+              />
+            </button>
+          </div>
           <div id="resultadosSec2" class="resultados"></div>
+          
         </div>
+        
       </div>
       <div class="section" id="section4">
         <div class="titleInstructions">
@@ -494,7 +510,7 @@
         </div>
       </div>
     </div>
-
+    
     <div class="controls">
       <button id="prevBtn" class="caroseli">Anterior</button>
       <div class="dots">
@@ -508,6 +524,13 @@
       </div>
       <button id="nextBtn" class="caroseli">Siguiente</button>
     </div>
+
+    <div id="verificarR" class="modal">
+      <!-- Modal de seccion 1 -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PMZdq8qryPY?si=667Sy6NGvO72eoPF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     <script src="./jsFiles/carouselCode/carousel.js"></script>
     <script src="./jsFiles/arrangeLetter/arrangeLetterJavier.js"></script>
     <script src="./jsFiles/arrangeLetter/arrangeLetterMaria.js"></script>
@@ -517,6 +540,7 @@
     <script src="./jsFiles/arrangeLetter/verificarArrange.js"></script>
     <script src="./jsFiles/dragNdrop/dragNdrop.js"></script>
     <script src="./jsFiles/Modales/IntroduccionModal.js"></script>
+    <script src="./jsFiles/Modales/VerificarRespuestas.js"></script>
     <script src="./jsFiles/yoSoy/script3.js"></script>
   </body>
 </html>
