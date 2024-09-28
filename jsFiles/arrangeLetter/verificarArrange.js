@@ -34,7 +34,7 @@ function verificarAcomodo() {
     }
     let resultado = document.getElementById("resultadosSec2")
     console.log("contadoooo", contador.toString())
-    resultado.innerHTML= "Respuestas correctas: "+contador +" de 6"
+    resultado.innerHTML= "Aciertos: "+contador +" de 5"
 }
 
 

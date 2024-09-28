@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let shuffledName = shuffle(name.split('')).join('');
     const letterButtonsContainer = document.getElementById('letter-buttons2');
     const spacesContainer = document.getElementById('spaces2');
-    const resetButton = document.getElementById('reset2');
     let spaces = [];
 
     // Función para barajar un array
@@ -17,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializar el juego
     function init() {
+        console.log('Inicializando quinto ejercicio'); // Verificar si esto se ejecuta
         letterButtonsContainer.innerHTML = ''; // Limpiar contenedor de botones
         spacesContainer.innerHTML = ''; // Limpiar contenedor de espacios
         spaces = []; // Resetear array de espacios
@@ -26,9 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < name.length; i++) {
             const space = document.createElement('div');
             space.classList.add('space');
+            space.setAttribute("id",i)
             spaces.push(space);
             spacesContainer.appendChild(space);
         }
+        
 
         // Crear botones de letras desordenadas
         let dragbtnnumber = 1
@@ -41,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (firstEmptySpace) {
                     firstEmptySpace.textContent = button.textContent;
                     button.disabled = true; // Deshabilitar el botón
+                    quitarLetra(firstEmptySpace, button)
                 }
             });
             button.setAttribute('draggable', true);
@@ -49,6 +52,18 @@ document.addEventListener('DOMContentLoaded', () => {
             dragbtnnumber+=1
         });
 
+       
+        function quitarLetra(espacio, boton) {
+            espacio.addEventListener('click', function eventoQuitarLetra() {
+                if (espacio.textContent != "" && boton.textContent==espacio.textContent) {
+                    console.log(boton.textContent + " ligado a " + espacio.textContent);
+                    console.log(espacio);
+                    espacio.textContent = "";
+                    boton.disabled = false;
+                }
+            })
+            return;
+        }
         //Drag n drop de los botones
         letterButtonsContainer.childNodes.forEach(letter => {
             letter.addEventListener("dragstart", (e)=> {
@@ -60,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     space.addEventListener("drop", (e)=>{
                         space.textContent = selected.textContent
                         selected.disabled = true
+                        quitarLetra(space);
                         selected = null;
                     });
                 })
@@ -67,12 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
                
             })
         })
+
+
     }
 
-    // Reiniciar el juego al hacer clic en el botón de reinicio
-    resetButton.addEventListener('click', () => {
-        init(); // Reiniciar todo llamando a init()
-    });
+    
 
     // Llamar a init() al cargar la página por primera vez
     init();

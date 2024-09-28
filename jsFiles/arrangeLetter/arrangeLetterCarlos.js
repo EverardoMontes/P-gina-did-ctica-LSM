@@ -55,24 +55,18 @@ document.addEventListener('DOMContentLoaded', () => {
             dragbtnnumber+=1
         });
 
-
+       
         function quitarLetra(espacio, boton) {
-            espacio.addEventListener('click', function eventoQuitarLetra(){
-                console.log(boton.textContent + " ligado a " + espacio.textContent);
-                console.log(espacio);
-                espacio.textContent = "";
-                boton.disabled = false;
+            espacio.addEventListener('click', function eventoQuitarLetra() {
+                if (espacio.textContent != "" && boton.textContent==espacio.textContent) {
+                    console.log(boton.textContent + " ligado a " + espacio.textContent);
+                    console.log(espacio);
+                    espacio.textContent = "";
+                    boton.disabled = false;
+                }
             })
             return;
         }
-
-        function limpiarEventos(espacio) {
-            let old_element = espacio
-            let new_element = old_element.cloneNode(true);
-            old_element.parentNode.replaceChild(new_element, old_element);
-        }
-
-
         //Drag n drop de los botones
         letterButtonsContainer.childNodes.forEach(letter => {
             letter.addEventListener("dragstart", (e)=> {
@@ -84,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     space.addEventListener("drop", (e)=>{
                         space.textContent = selected.textContent
                         selected.disabled = true
-                        quitarLetra(space, selected)
+                        quitarLetra(space);
                         selected = null;
                     });
                 })
