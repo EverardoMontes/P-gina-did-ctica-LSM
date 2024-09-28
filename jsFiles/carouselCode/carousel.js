@@ -6,6 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = document.getElementById("nextBtn");
   let currentIndex = 0;
 
+
+  //ESTA PARTE ENSEÑA EL PRINCIPIO PARA BUSCAR UNA SECCIÓN POR CLASE
+  // console.log(sections)
+  // sections.forEach(element => {
+  //   if(element.classList[1] == "ordenar") {
+  //     console.log("ORDENÉ")
+  //   }
+  // })
+
+
   function showSection(index) {
     sections.forEach((section, i) => {
       section.classList.toggle("active", i === index);
