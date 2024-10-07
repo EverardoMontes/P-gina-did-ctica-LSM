@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log(espacio);
           espacio.textContent = "";
           boton.disabled = false;
+          boton.setAttribute("draggable", true);
         }
       });
       return;
@@ -78,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
           space.addEventListener("drop", (e) => {
             space.textContent = selected.textContent;
             selected.disabled = true;
+            selected.setAttribute("draggable", false);
             quitarLetra(space, selected);
             selected = null;
           });
