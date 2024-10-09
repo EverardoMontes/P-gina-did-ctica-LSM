@@ -94,118 +94,68 @@ function verificarRespuestas2() {
 
 /////////// CÓDIGO DEL MEMORAMA
 
-const cardsArray = [
-    { type: 'phrase', content: 'Mi nombre es Luis' },
-    { type: 'phrase', content: 'Mi nombre es María' },
-    { type: 'phrase', content: 'Mi nombre es Pablo' },
-    { type: 'phrase', content: 'Mi nombre es Diana' },
-    { type: 'image', content: 'imgs/ejercicio/Luis.png' },
-    { type: 'image', content: 'imgs/ejercicio/Maria.png' },
-    { type: 'image', content: 'imgs/ejercicio/Pablo.png' },
-    { type: 'image', content: 'imgs/ejercicio/Diana.png' }
-];
+const cards=document.querySelectorAll('.memory-card');
 
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
+let hasFlippedCard=false;
+let lockBoard=false;
+let firstCard, secondCard;
+let cardsFlippedCounter=0;
 
-let shuffledCards = shuffle([...cardsArray]);
-const gameBoard = document.getElementById('game-board');
-let firstCard, secondCard, lockBoard = false, matchedPairs = 0;
+function flipCard(){
+    if(lockBoard) return;
+    if(this=== firstCard) return;
 
-function createCards() {
-    shuffledCards.forEach((cardData) => {
-        const card = document.createElement('div');
-        card.classList.add('card');
-        card.dataset.type = cardData.type;
-        card.dataset.content = cardData.content;
+    this.classList.add('flip');
+    
+    if(!hasFlippedCard){
+        hasFlippedCard=true;
+        firstCard=this;
 
-        card.innerHTML = cardData.type === 'phrase' ? "" : `<img src="${cardData.content}" style="display: none;">`;
-        card.addEventListener('click', flipCard);
-        gameBoard.appendChild(card);
-    });
-}
-
-function flipCard() {
-    if (lockBoard || this === firstCard) return;
-
-    this.classList.add('flipped');
-    if (this.dataset.type === 'phrase') {
-        this.innerText = this.dataset.content;
-    } else {
-        this.querySelector('img').style.display = "block";
+        return;
     }
 
-    if (!firstCard) {
-        firstCard = this;
-    } else {
-        secondCard = this;
-        checkForMatch();
+    hasFlippedCard=false;
+    secondCard=this;   
+
+    checkForMatch();
+
+}
+function checkForMatch(){
+    let isMatch = firstCard.dataset.name===secondCard.dataset.name
+    isMatch ? disableCards():unflipCards();
+}
+function disableCards(){
+    firstCard.removeEventListener('click',flipCard);
+    secondCard.removeEventListener('click',flipCard);
+    cardsFlippedCounter+=2;
+    if(cardsFlippedCounter==8){
+        const resultadoDiv = document.getElementById('resultadoSec6');
+        resultadoDiv.innerHTML = `Has completado el memorama`;
     }
-}
-
-function checkForMatch() {
-    const firstCardContent = firstCard.dataset.content;
-    const secondCardContent = secondCard.dataset.content;
-    const firstCardImage = matchWithImage(firstCard);
-    const secondCardImage = matchWithImage(secondCard);
-
-    const isMatch = (firstCard.dataset.type === 'phrase' && firstCardContent === secondCardImage) ||
-                    (secondCard.dataset.type === 'phrase' && secondCardContent === firstCardImage);
-
-    isMatch ? disableCards() : unflipCards();
-}
-
-function matchWithImage(card) {
-    const matches = {
-        'Mi nombre es Luis': 'imgs/ejercicio/Luis.png',
-        'Mi nombre es María': 'imgs/ejercicio/Maria.png',
-        'Mi nombre es Pablo': 'imgs/ejercicio/Pablo.png',
-        'Mi nombre es Diana': 'imgs/ejercicio/Diana.png'
-    };
-    return matches[card.dataset.content];
-}
-
-function disableCards() {
-    [firstCard, secondCard].forEach(card => card.classList.add('matched'));
     resetBoard();
-    matchedPairs++;
-    if (matchedPairs === cardsArray.length / 2) setTimeout(() => alert('¡Ganaste!'), 500);
 }
+function unflipCards(){
+    lockBoard=true;
+    setTimeout(()=>{
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
 
-function unflipCards() {
-    lockBoard = true;
-    setTimeout(() => {
-        [firstCard, secondCard].forEach(card => {
-            card.classList.remove('flipped');
-            if (card.dataset.type === 'phrase') {
-                card.innerText = "";
-            } else {
-                card.querySelector('img').style.display = "none";
-            }
-        });
         resetBoard();
-    }, 1000);
+    },1500);
+    
+}
+function resetBoard(){
+    [hasFlippedCard, lockBoard]=[false,false];
+    [firstCard,secondCard]=[null,null]
 }
 
-function resetBoard() {
-    [firstCard, secondCard] = [null, null];
-    lockBoard = false;
-}
+(function shuffle(){
+    cards.forEach(card =>{
+        let randomPos=Math.floor(Math.random()*8);
+        card.style.order=randomPos;
+    });
+})();
 
-createCards();
+cards.forEach(card => card.addEventListener('click',flipCard))
 
-  
-  // Resetear las variables para la siguiente jugada
-  function resetBoard() {
-      [firstCard, secondCard] = [null, null];
-      lockBoard = false;
-  }
-  
-  // Inicializar el juego
-  createCards();
-  
+

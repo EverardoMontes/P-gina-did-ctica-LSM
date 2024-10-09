@@ -1,11 +1,16 @@
 /* Escritorio */
+*{
+    box-sizing: border-box;
+}
 body {
-  font-family: "Mulish";
-  font-weight: normal;
+    height:100vh;
+    font-family: "Mulish";
+    font-weight: normal;
 }
 iframe {
-  max-width: 100%;
+    max-width: 100%;
 }
+
 @media (min-width: 1024px) {
   .scene {
     display: flex;
@@ -72,98 +77,201 @@ iframe {
     width: 100%;
     min-height: 100vh;
   }
-  .game-board {
-    display: grid;
-    grid-template-columns: repeat(4, 200px); /* Cuatro columnas */
-    grid-gap: 50px;
-    justify-content: center;
-  }
+  .memory-game{
 
-  .card {
-    width: 200px;
-    height: 150px;
-    background-color: #3498db; /* Reverso uniforme para todas las cartas */
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+.memory-card{
+    width: calc(25% - 10px);
+    height: calc(40% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style:preserve-3d;
+    transition: transform .5s;
+}
+.memory-card:active{
+    transform: scale(.97);
+    transition:transform .2s;
+}
+.front-face img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.front-face,
+.back-face{
+    border: solid black 1px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
-    color: white;
-    cursor: pointer;
-    border-radius: 10px;
-    user-select: none;
-    transition: transform 0.3s;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .card img {
-    max-width: 100%;
-    max-height: 100%;
-    display: none;
-  }
-
-  .card.flipped img {
-    display: block;
-  }
-
-  .card.flipped {
-    background-color: #2ecc71; /* Color al ser volteada */
-  }
-
-  .card.matched {
-    background-color: #95a5a6;
-    cursor: default;
-  }
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: white;
+    backface-visibility: hidden;
+}
+.back-face{
+    background-color: #d0e4f4;
+}
+.front-face{
+    transform: rotateY(180deg);
+}
+.memory-card.flip{
+    transform: rotateY(180deg);
+}
 }
 
 /* Tablet */
 @media screen and (max-width: 900px) {
-  .scene {
-    flex-direction: column;
-    align-items: center;
-  }
+    .scene {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 99%;
+      }
+      .imagenPrueba {
+        width: 400px;
+        height: auto;
+      }
+      h2 {
+        font-size: xx-large;
+      }
+      p {
+        font-size: x-large;
+      }
+      .doodle {
+        width: 108%;
+        height: 400px;
+        margin: -10px;
+        margin-bottom: -200px;
+      }
+      .letra_img {
+        width: 50px;
+        height: 50px;
+      }
+      .logo {
+        margin-top: -600px;
+        width: 300px;
+        height: auto;
+        padding-bottom: 70px;
+      }
+      .navigation {
+        text-align: center;
+      }
+    
+      .section {
+        display: none;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .section.active {
+        display: flex;
+        flex-direction: column;
+      }
+      .carousel {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        min-height: 100vh;
+      }
+      .dots {
+        display: flex;
+        position: center;
+      }
+    
+      .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    
+      .dot.active {
+        background-color: #717171;
+      }
+      .vertical-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .container {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .character {
+        margin-left: auto;
+        width: 50px;
+        height: auto;
+      }
 
-  .imagenPrueba {
-    width: 300px;
-  }
+      .memory-game{
 
-  .logo {
-    margin-top: -600px;
-    width: 300px;
-  }
-
-  h2 {
-    font-size: xx-large;
-  }
-
-  p {
-    font-size: x-large;
-  }
-
-  .doodle {
-    width: 103%;
-    height: 400px;
-    margin-bottom: -200px;
-  }
-
-  .letra_img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .game-board {
-    display: grid;
-    grid-template-columns: repeat(2, 200px);
-    grid-gap: 50px;
-    justify-content: center;
-  }
-
-  .card {
-    width: 200px;
-    height: 150px;
-  }
+        width: 90%;
+        height: 600px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        perspective: 1000px;
+    }
+    .memory-card{
+        width: calc(50% - 10px);
+        height: calc(25% - 10px);
+        margin: 5px;
+        position: relative;
+        transform: scale(1);
+        transform-style:preserve-3d;
+        transition: transform .5s;
+    }
+    .memory-card:active{
+        transform: scale(.97);
+        transition:transform .2s;
+    }
+    .front-face img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .front-face,
+    .back-face{
+        border: solid black 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        position: absolute;
+        border-radius: 5px;
+        background: white;
+        backface-visibility: hidden;
+    }
+    .back-face{
+        background-color: #d0e4f4;
+    }
+    .front-face{
+        transform: rotateY(180deg);
+    }
+    .memory-card.flip{
+        transform: rotateY(180deg);
+    }
 }
-
 /* Teléfono */
 @media screen and (max-width: 600px) {
   .scene {
@@ -255,6 +363,57 @@ iframe {
     width: 50px;
     height: auto;
   }
+  .memory-game{
+
+    width: 90%;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+.memory-card{
+    width: calc(50% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style:preserve-3d;
+    transition: transform .5s;
+}
+.memory-card:active{
+    transform: scale(.97);
+    transition:transform .2s;
+}
+.front-face img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.front-face,
+.back-face{
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: white;
+    backface-visibility: hidden;
+}
+.back-face{
+    background-color: #d0e4f4;
+}
+.front-face{
+    transform: rotateY(180deg);
+}
+.memory-card.flip{
+    transform: rotateY(180deg);
+}
 }
 
 .titleInstructions {
