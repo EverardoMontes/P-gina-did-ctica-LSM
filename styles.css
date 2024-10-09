@@ -86,10 +86,11 @@ iframe {
     align-items: center;
     flex-wrap: wrap;
     perspective: 1000px;
+    margin-bottom: 50px;
 }
 .memory-card{
     width: calc(25% - 10px);
-    height: calc(40% - 10px);
+    height: calc(50% - 10px);
     margin: 5px;
     position: relative;
     transform: scale(1);
@@ -224,12 +225,13 @@ iframe {
       .memory-game{
 
         width: 90%;
-        height: 600px;
+        height: 1000px;
         margin: auto;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         perspective: 1000px;
+        margin-bottom: 50px;
     }
     .memory-card{
         width: calc(50% - 10px);
@@ -373,6 +375,7 @@ iframe {
     justify-content: center;
     flex-wrap: wrap;
     perspective: 1000px;
+    margin-bottom: 50px;
 }
 .memory-card{
     width: calc(50% - 10px);
