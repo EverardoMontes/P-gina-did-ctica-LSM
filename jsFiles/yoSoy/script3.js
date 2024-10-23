@@ -128,9 +128,17 @@ function disableCards(){
     firstCard.removeEventListener('click',flipCard);
     secondCard.removeEventListener('click',flipCard);
     cardsFlippedCounter+=2;
+    const firstFrontFace = firstCard.querySelector('.front-face');
+    const secondFrontFace = secondCard.querySelector('.front-face');
+
+    if (firstFrontFace && secondFrontFace) {
+        firstFrontFace.style.borderColor = 'green';
+        secondFrontFace.style.borderColor = 'green';
+    }
+
     if(cardsFlippedCounter==8){
         const resultadoDiv = document.getElementById('resultadoSec6');
-        resultadoDiv.innerHTML = `Has completado el memorama`;
+        resultadoDiv.style.display = 'block';
     }
     resetBoard();
 }
@@ -141,7 +149,7 @@ function unflipCards(){
         secondCard.classList.remove('flip');
 
         resetBoard();
-    },1500);
+    },4500);
     
 }
 function resetBoard(){

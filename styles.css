@@ -10,8 +10,33 @@ body {
 iframe {
     max-width: 100%;
 }
+#resultadoSec6{
+  display: none;
+}
 
 @media (min-width: 1024px) {
+  .imgExpose {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    gap: 20px; /* Espacio entre las imágenes */
+  }
+  .imgExpose img {
+    display: block;
+    /* Ajusta el tamaño según sea necesario */
+    width: 450px;
+    height: auto;
+  }
+
+  .menuOption{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+    gap: 20px; /* Espacio entre las imágenes */
+  }
+
+  .menuOption p{
+    align-items: center;
+  }
   .scene {
     display: flex;
     flex-direction: row;
@@ -54,17 +79,19 @@ iframe {
     display: flex;
     flex-direction: column;
   }
-  .dots {
+  .dots  {
     display: flex;
+    flex-direction: column;
+    align-items: start;
   }
-
+ 
   .dot {
     height: 15px;
     width: 15px;
-    margin: 0 5px;
+    margin: 10px;
     background-color: #000000;
     border-radius: 50%;
-    display: inline-block;
+    display: flex;
     cursor: pointer;
   }
 
@@ -107,6 +134,7 @@ iframe {
 }
 .front-face,
 .back-face{
+  font-size: 24px;
     border: solid black 1px;
     display: flex;
     justify-content: center;
@@ -118,6 +146,9 @@ iframe {
     border-radius: 5px;
     background: white;
     backface-visibility: hidden;
+}
+.memory-card.memo-correct{
+  border: solid green 1px;
 }
 .back-face{
     background-color: #d0e4f4;
@@ -252,6 +283,7 @@ iframe {
     }
     .front-face,
     .back-face{
+        font-size: 30px;
         border: solid black 1px;
         display: flex;
         justify-content: center;
@@ -396,6 +428,7 @@ iframe {
 }
 .front-face,
 .back-face{
+  font-size: 30px;
     border: solid black 1px;
     display: flex;
     justify-content: center;
