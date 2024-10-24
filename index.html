@@ -42,53 +42,9 @@
             />
           </button>
         </div>
-        <div class="scene">
-          <div class="escena">
-            <div class="dots">
-              <div class="menuOption" style="display: none;" >
-                <span class="dot" data-index="1"></span>
-                <p>Ejemplo</p>
-              </div>
-              <div class="menuOption">
-                <span class="dot" data-index="2"></span>
-                <p>Mis nuevos vecinos</p>
-                
-              </div>
-              <div class="menuOption">
-                <span class="dot" data-index="3"></span>
-                <p>Conociéndonos entre vecinos</p>
-                
-              </div>
-              <div class="menuOption">
-                <span class="dot" data-index="4" style="display: none;"></span>                
-              </div>
-              <div class="menuOption">
-                <span class="dot" data-index="5"></span>
-                <p>Yo soy…</p>
-              </div>
-              <div class="menuOption">
-                <span class="dot" data-index="6" style="display: none;"></span>                
-              </div>
-              <div class="menuOption">
-                <span class="dot" data-index="7"></span>
-                <p>Nuevas formas de presentarnos</p>
-              </div>
-              <div class="menuOption">
-                <span class="dot" data-index="8" style="display: none;"></span>
-              </div>
-              <div class="menuOption">
-                <span class="dot" data-index="9"></span>
-                <p>Juguemos memorama</p>
-              </div>
-              <!-- Agrega más dots si tienes más secciones -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section" id="section2">
         <div class="titleInstructions">
-          <h1>Mis nuevos vecinos</h1>
-          <button class="iconlsmbutton" id="modalMisNuevosVecinos">
+          <h2>Llegaron nuevos vecinos</h2>
+          <button class="iconlsmbutton" id="modalLlegaronNuevosVecinos">
             <img
               src="./imgs/manitas.png"
               alt="Icono clickeable para traducción a lengua de señas mexicana"
@@ -109,6 +65,76 @@
             ></iframe>
           </div>
         </div>
+        <br>
+        <br>
+        <div class="scene">
+          <div class="escena">
+            <div class="dots">
+              <div class="menuOption" style="display: none;" >
+                <span class="dot" data-index="1"></span>
+                <p>Ejemplo</p>
+              </div>
+              <div class="menuOption" style="display: none;">
+                <span class="dot" data-index="2"></span>
+                <p>Llegaron nuevos vecinos</p>
+                
+              </div>
+              <div class="menuOption">
+                <span class="dot" data-index="3"></span>
+                <p>Conociéndonos entre vecinos</p>
+                <button class="iconlsmbutton" id="modalConociéndonosEntreVecinos">
+                  <img
+                    src="./imgs/manitas.png"
+                    alt="Icono clickeable para traducción a lengua de señas mexicana"
+                  />
+                </button>
+              </div>
+              <div class="menuOption">
+                <span class="dot" data-index="4" style="display: none;"></span>                
+              </div>
+              <div class="menuOption">
+                <span class="dot" data-index="5"></span>
+                <p>Yo soy…</p>
+                <button class="iconlsmbutton" id="modalYoSoy">
+                  <img
+                    src="./imgs/manitas.png"
+                    alt="Icono clickeable para traducción a lengua de señas mexicana"
+                  />
+                </button>
+              </div>
+              <div class="menuOption">
+                <span class="dot" data-index="6" style="display: none;"></span>                
+              </div>
+              <div class="menuOption">
+                <span class="dot" data-index="7"></span>
+                <p>Nuevas formas de presentarnos</p>
+                <button class="iconlsmbutton" id="modalNuevasFormasDePresentarnos">
+                  <img
+                    src="./imgs/manitas.png"
+                    alt="Icono clickeable para traducción a lengua de señas mexicana"
+                  />
+                </button>
+              </div>
+              <div class="menuOption">
+                <span class="dot" data-index="8" style="display: none;"></span>
+              </div>
+              <div class="menuOption">
+                <span class="dot" data-index="9"></span>
+                <p>Juguemos memorama</p>
+                <button class="iconlsmbutton" id="modalJuguemosMemorama">
+                  <img
+                    src="./imgs/manitas.png"
+                    alt="Icono clickeable para traducción a lengua de señas mexicana"
+                  />
+                </button>
+              </div>
+              <!-- Agrega más dots si tienes más secciones -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section2">
+        
       </div>
       <div class="section" id="section3">
         <div class="titleInstructions">
@@ -263,8 +289,8 @@
       </div>
       <div class="section ordenar" id="section4">
         <div class="titleInstructions">
-          <h1>Ordena las letras de cada nombre</h1>
-          <button class="iconlsmbutton" id="modalOrdenarLetras">
+          <h1>Conociéndonos entre vecinos</h1>
+          <button class="iconlsmbutton" id="modalConociéndonosEntreVecinos">
             <img
               src="./imgs/manitas.png"
               alt="Icono clickeable para traducción a lengua de señas mexicana"
@@ -485,9 +511,19 @@
                 class="character"
               />
             </div>
-            <button onclick="verificarRespuestas()">
-              Verificar respuestas
-            </button>
+            <div class="titleInstructions">
+              <button onclick="verificarRespuestas()">
+                Verificar respuestas
+              </button>
+              <button class="iconlsmbutton verificar" id="modalverificarRespuestas">
+                <img
+                  src="./imgs/manitas.png"
+                  alt="Icono clickeable para traducción a lengua de señas mexicana"
+                />
+              </button>
+
+            </div>
+            
             <div id="resultadoSec3" class="resultados"></div>
           </div>
         </div>
@@ -579,9 +615,18 @@
                 class="character"
               />
             </div>
-            <button onclick="verificarRespuestas2()">
-              Verificar respuestas
-            </button>
+            <div class="titleInstructions">
+              <button onclick="verificarRespuestas2()">
+                Verificar respuestas
+              </button>
+              <button class="iconlsmbutton verificar" id="modalverificarRespuestas">
+                <img
+                  src="./imgs/manitas.png"
+                  alt="Icono clickeable para traducción a lengua de señas mexicana"
+                />
+              </button>
+
+            </div>
             <div id="resultadoSec4" class="resultados"></div>
           </div>
         </div>
@@ -589,7 +634,7 @@
       <div class="section" id="section9" >
         <div class="titleInstructions">
           <h1>Juguemos memorama</h1>
-          <button class="iconlsmbutton" id="">
+          <button class="iconlsmbutton" id="modalJuguemosMemorama">
             <img
               src="./imgs/manitas.png"
               alt="Icono clickeable para traducción a lengua de señas mexicana"
@@ -640,7 +685,7 @@
           </div>
         </div>
         <div id="resultadoSec6" class="resultados"> 
-          <p>¡Lo hiciste bien!</p>
+          <p>¡Bravo, muy bien!</p>
           <button class="iconlsmbutton" id="modalLoHicisteBien">
             <img
               src="./imgs/manitas.png"
@@ -652,7 +697,7 @@
     </div>
     
     <div class="controls">
-      <button id="prevBtn" class="caroseli">Regresar al menu</button>
+      <button id="prevBtn" class="caroseli">Regresar</button>
       
       <button id="nextBtn" class="caroseli">Siguiente</button>
     </div>

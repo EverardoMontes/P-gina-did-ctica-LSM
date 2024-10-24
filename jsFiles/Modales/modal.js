@@ -7,9 +7,17 @@ console.log(buttons)
 console.log("CARGARON")
 
 var modalesExistentes = {
-    "modalMisNuevosVecinos":`https://www.youtube.com/embed/zrpb7Lm5MY4?si=0lBt_qRMaFyprqSk`,
+    "modalMisNuevosVecinos":`https://www.youtube.com/embed/zrpb7Lm5MY4?si=wsr_uB-Lk5pdV0lw`,
     "modalverificarRespuestas":`https://www.youtube.com/embed/PMZdq8qryPY?si=667Sy6NGvO72eoPF`,
-    "modalLoHicisteBien":`https://www.youtube.com/embed/GEIR6rdUNUM?si=0o9SiLrXfnYwT2Ir`
+    "modalLoHicisteBien": `https://www.youtube.com/embed/GEIR6rdUNUM?si=0o9SiLrXfnYwT2Ir`,
+    "modalAciertos": `https://www.youtube.com/embed/3wBzN_NTDto?si=YKwPcxb7BJ13IjU-`,
+    "modalErrores": `https://www.youtube.com/embed/OUSj2zRb_EE?si=8clQQSZxKd1etYq_`,
+    "modalConociéndonosEntreVecinos": ``,
+    "modalLlegaronNuevosVecinos": ``,
+    "modalJuguemosMemorama": `https://www.youtube.com/embed/_Vt7l2mDveA?si=juDhdXKq0CZU3CJW`,
+    "modalYoSoy": ``,
+    "modalNuevasFormasDePresentarnos":``
+    
 }
 // Al hacer clic en el botón, mostrar el modal
 buttons.forEach(button => {

@@ -27,6 +27,9 @@ iframe {
     height: auto;
   }
 
+  .dragButton1,.dragButton2,.dragButton3,.dragButton4,.dragButton5,.dragButton6{
+    font-size:larger;
+  }
   .menuOption{
     display: flex;
     justify-content: center; /* Centra horizontalmente */
@@ -578,6 +581,7 @@ button {
   align-items: center;
   margin: 5px;
   font-size: 1em;
+  font-size: larger;
 }
 
 .correct {
@@ -586,6 +590,7 @@ button {
 
 .resultados {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 

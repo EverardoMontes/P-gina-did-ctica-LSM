@@ -1,3 +1,73 @@
+
+let resultado = document.getElementById("resultadosSec2")
+
+
+let aciertosDiv = document.createElement('div');
+aciertosDiv.setAttribute("id", "aciertosDiv");
+let aciertos = document.createElement('p');
+aciertos.setAttribute("id", "aciertos");
+let espacio = document.createElement('br');
+aciertos.textContent = "Aciertos: " 
+aciertosDiv.appendChild(aciertos);
+
+// Aqui comienza la creación y añadir boton de aciertos
+let botonAciertos = document.createElement('button');
+botonAciertos.classList.add('iconlsmbutton')
+botonAciertos.classList.add('verificar')
+botonAciertos.setAttribute("id", "modalAciertos");
+let imagenSeñas = document.createElement('img');
+imagenSeñas.setAttribute("src", "./imgs/manitas.png");
+imagenSeñas.setAttribute("alt", "Icono clickeable para traducción a lengua de señas mexicana");
+    
+botonAciertos.appendChild(imagenSeñas)
+aciertosDiv.appendChild(botonAciertos)
+
+resultado.appendChild(aciertosDiv);
+resultado.appendChild(espacio);
+
+
+let erroresDiv = document.createElement('div');
+erroresDiv.setAttribute("id", "erroresDiv");
+let errores = document.createElement('p');
+errores.setAttribute("id", "errores");
+errores.textContent = "Errores: " 
+erroresDiv.appendChild(errores);
+let botonErrores = document.createElement('button');
+botonErrores.classList.add('iconlsmbutton')
+botonErrores.classList.add('verificar')
+botonErrores.setAttribute("id", "modalErrores");
+    
+let imgSenas = document.createElement('img');
+imgSenas.setAttribute("src", "./imgs/manitas.png");
+imgSenas.setAttribute("alt", "Icono clickeable para traducción a lengua de señas mexicana");
+botonErrores.appendChild(imgSenas)
+erroresDiv.appendChild(botonErrores)
+
+resultado.appendChild(erroresDiv);
+
+
+
+let bravoDiv = document.createElement('div');
+bravoDiv.setAttribute("id", "bravoDiv");
+let bravo = document.createElement('p');
+bravo.setAttribute("id", "bravo");
+bravo.textContent = "¡Bravo, muy bien!" 
+bravoDiv.appendChild(bravo);
+let botonBravo = document.createElement('button');
+botonBravo.classList.add('iconlsmbutton')
+botonBravo.classList.add('verificar')
+botonBravo.setAttribute("id", "modalLoHicisteBien");
+    
+let img = document.createElement('img');
+img.setAttribute("src", "./imgs/manitas.png");
+img.setAttribute("alt", "Icono clickeable para traducción a lengua de señas mexicana");
+botonBravo.appendChild(img)
+bravoDiv.appendChild(botonBravo)
+
+resultado.appendChild(bravoDiv);
+
+resultado.style.display = "none"
+
 function desactivar(div, palabra) {
         console.log(div, "diveee")
         let word = "";
@@ -20,6 +90,17 @@ function desactivar(div, palabra) {
     }
 }
 function verificarAcomodo() {
+    resultado.appendChild(erroresDiv);
+    let aciertos = document.getElementById("aciertos");
+    let aciertosDiv = document.getElementById("aciertosDiv");
+    let errores = document.getElementById("errores");
+    let errorDiv = document.getElementById("erroresDiv");
+    let bravoDivision = document.getElementById("bravoDiv");
+    aciertosDiv.style.display = "none"
+    errorDiv.style.display = "none"
+    bravoDivision.style.display = "none"
+    aciertos.textContent = "";
+    errores.textContent = "";
     console.log("me picaste");
     let javier = document.getElementById("spaces1")
     let elena= document.getElementById("spaces2")
@@ -32,9 +113,28 @@ function verificarAcomodo() {
     for (let i = 0; i <= array.length-1; i++){
         contador+= desactivar(array[i], palabras[i]);
     }
-    let resultado = document.getElementById("resultadosSec2")
-    console.log("contadoooo", contador.toString())
-    resultado.innerHTML= "Aciertos: "+contador +" de 5"
+    if (contador > 0 && contador < 5) {
+        aciertos.textContent = "Aciertos: " + contador.toString();
+        aciertosDiv.style.display = "block"
+    }
+    if (contador != 5) {
+        errores.textContent = "Errores: " + (5 - contador).toString();
+        errores.style.display = "block"
+        errorDiv.style.display = "block"
+    }
+    if (contador == 5) { 
+        bravoDivision.style.display = "block"
+    }
+    resultado.style.display = "block"
+
+
+
+    // <button class="iconlsmbutton verificar" id="modalverificarRespuestas">
+    //           <img
+    //             src="./imgs/manitas.png"
+    //             alt="Icono clickeable para traducción a lengua de señas mexicana"
+    //           />
+    //         </button>
 }
 
 
