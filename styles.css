@@ -370,6 +370,17 @@ iframe {
     width: 100%;
     min-height: 100vh;
   }
+  .imgExpose {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    gap: 20px; /* Espacio entre las imágenes */
+  }
+  .imgExpose img {
+    display: block;
+    /* Ajusta el tamaño según sea necesario */
+    width: 450px;
+    height: auto;
+  }
   .dots {
     display: flex;
     flex-direction: column;
