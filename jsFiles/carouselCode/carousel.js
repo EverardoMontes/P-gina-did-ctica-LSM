@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".section");
   const dots = document.querySelectorAll(".dot");
+  const menuButtons = document.querySelectorAll(".menuButton");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
   const controls = document.getElementById("controles");
@@ -49,6 +50,14 @@ document.addEventListener("DOMContentLoaded", () => {
     dot.addEventListener("click", () => {
       currentIndex = index;
       showSection(currentIndex);
+    });
+  });
+
+  menuButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      currentIndex = index;
+      showSection(currentIndex);
+      console.log("me picaste");
     });
   });
 

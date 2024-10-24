@@ -45,6 +45,11 @@ iframe {
   .menuOption p {
     align-items: center;
   }
+
+  .menuButton {
+    display: flex;
+    align-items: center;
+  }
   .scene {
     display: flex;
     flex-direction: row;
@@ -155,7 +160,7 @@ iframe {
     backface-visibility: hidden;
   }
   .memory-card.memo-correct {
-    border: solid green 1px;
+    border: solid green 2px;
   }
   .back-face {
     background-color: #d0e4f4;
@@ -665,6 +670,10 @@ button {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+.menuButton {
+  display: flex;
+  align-items: center;
 }
 @font-face {
   font-family: "Mulish";
