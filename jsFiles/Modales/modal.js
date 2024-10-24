@@ -3,8 +3,8 @@ window.onload = function () {
   const buttons = document.querySelectorAll('[id*="modal"]');
   var span = document.getElementById("span1");
 
-  console.log(buttons);
-  console.log("CARGARON");
+  //   console.log(buttons);
+  //   console.log("CARGARON");
 
   var modalesExistentes = {
     modalMisNuevosVecinos: `https://www.youtube.com/embed/zrpb7Lm5MY4?si=wsr_uB-Lk5pdV0lw`,
@@ -27,7 +27,6 @@ window.onload = function () {
       var videoUrl = modalesExistentes[idButton];
       var iframe = document.querySelector("#emergente iframe");
       iframe.src = videoUrl;
-      console.log("EEEEEEEEEEEE");
       modal.style.display = "block";
     });
   });
