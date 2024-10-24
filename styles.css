@@ -1,16 +1,16 @@
 /* Escritorio */
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 body {
-    height:100vh;
-    font-family: "Mulish";
-    font-weight: normal;
+  height: 100vh;
+  font-family: "Mulish";
+  font-weight: normal;
 }
 iframe {
-    max-width: 100%;
+  max-width: 100%;
 }
-#resultadoSec6{
+#resultadoSec6 {
   display: none;
 }
 
@@ -27,17 +27,22 @@ iframe {
     height: auto;
   }
 
-  .dragButton1,.dragButton2,.dragButton3,.dragButton4,.dragButton5,.dragButton6{
-    font-size:larger;
+  .dragButton1,
+  .dragButton2,
+  .dragButton3,
+  .dragButton4,
+  .dragButton5,
+  .dragButton6 {
+    font-size: larger;
   }
-  .menuOption{
+  .menuOption {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     align-items: center;
     gap: 20px; /* Espacio entre las imágenes */
   }
 
-  .menuOption p{
+  .menuOption p {
     align-items: center;
   }
   .scene {
@@ -82,12 +87,12 @@ iframe {
     display: flex;
     flex-direction: column;
   }
-  .dots  {
+  .dots {
     display: flex;
     flex-direction: column;
     align-items: start;
   }
- 
+
   .dot {
     height: 15px;
     width: 15px;
@@ -107,8 +112,7 @@ iframe {
     width: 100%;
     min-height: 100vh;
   }
-  .memory-game{
-
+  .memory-game {
     width: 90%;
     height: 500px;
     margin: auto;
@@ -117,27 +121,27 @@ iframe {
     flex-wrap: wrap;
     perspective: 1000px;
     margin-bottom: 50px;
-}
-.memory-card{
+  }
+  .memory-card {
     width: calc(25% - 10px);
     height: calc(50% - 10px);
     margin: 5px;
     position: relative;
     transform: scale(1);
-    transform-style:preserve-3d;
-    transition: transform .5s;
-}
-.memory-card:active{
-    transform: scale(.97);
-    transition:transform .2s;
-}
-.front-face img{
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  .memory-card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+  }
+  .front-face img {
     max-width: 100%;
     max-height: 100%;
-}
-.front-face,
-.back-face{
-  font-size: 24px;
+  }
+  .front-face,
+  .back-face {
+    font-size: 24px;
     border: solid black 1px;
     display: flex;
     justify-content: center;
@@ -149,168 +153,23 @@ iframe {
     border-radius: 5px;
     background: white;
     backface-visibility: hidden;
-}
-.memory-card.memo-correct{
-  border: solid green 1px;
-}
-.back-face{
+  }
+  .memory-card.memo-correct {
+    border: solid green 1px;
+  }
+  .back-face {
     background-color: #d0e4f4;
-}
-.front-face{
+  }
+  .front-face {
     transform: rotateY(180deg);
-}
-.memory-card.flip{
+  }
+  .memory-card.flip {
     transform: rotateY(180deg);
-}
+  }
 }
 
 /* Tablet */
 @media screen and (max-width: 900px) {
-    .scene {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 99%;
-      }
-      .imagenPrueba {
-        width: 400px;
-        height: auto;
-      }
-      h2 {
-        font-size: xx-large;
-      }
-      p {
-        font-size: x-large;
-      }
-      .doodle {
-        width: 108%;
-        height: 400px;
-        margin: -10px;
-        margin-bottom: -200px;
-      }
-      .letra_img {
-        width: 50px;
-        height: 50px;
-      }
-      .logo {
-        margin-top: -600px;
-        width: 300px;
-        height: auto;
-        padding-bottom: 70px;
-      }
-      .navigation {
-        text-align: center;
-      }
-    
-      .section {
-        display: none;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-    
-      .section.active {
-        display: flex;
-        flex-direction: column;
-      }
-      .carousel {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        min-height: 100vh;
-      }
-      .dots {
-        display: flex;
-        position: center;
-      }
-    
-      .dot {
-        height: 15px;
-        width: 15px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
-        cursor: pointer;
-      }
-    
-      .dot.active {
-        background-color: #717171;
-      }
-      .vertical-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-      .container {
-        width: 90%;
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-      .character {
-        margin-left: auto;
-        width: 50px;
-        height: auto;
-      }
-
-      .memory-game{
-
-        width: 90%;
-        height: 1000px;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        perspective: 1000px;
-        margin-bottom: 50px;
-    }
-    .memory-card{
-        width: calc(50% - 10px);
-        height: calc(25% - 10px);
-        margin: 5px;
-        position: relative;
-        transform: scale(1);
-        transform-style:preserve-3d;
-        transition: transform .5s;
-    }
-    .memory-card:active{
-        transform: scale(.97);
-        transition:transform .2s;
-    }
-    .front-face img{
-        max-width: 100%;
-        max-height: 100%;
-    }
-    .front-face,
-    .back-face{
-        font-size: 30px;
-        border: solid black 1px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-        position: absolute;
-        border-radius: 5px;
-        background: white;
-        backface-visibility: hidden;
-    }
-    .back-face{
-        background-color: #d0e4f4;
-    }
-    .front-face{
-        transform: rotateY(180deg);
-    }
-    .memory-card.flip{
-        transform: rotateY(180deg);
-    }
-}
-/* Teléfono */
-@media screen and (max-width: 600px) {
   .scene {
     display: flex;
     flex-direction: column;
@@ -400,38 +259,37 @@ iframe {
     width: 50px;
     height: auto;
   }
-  .memory-game{
 
+  .memory-game {
     width: 90%;
-    height: 600px;
+    height: 1000px;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
     perspective: 1000px;
     margin-bottom: 50px;
-}
-.memory-card{
+  }
+  .memory-card {
     width: calc(50% - 10px);
     height: calc(25% - 10px);
     margin: 5px;
     position: relative;
     transform: scale(1);
-    transform-style:preserve-3d;
-    transition: transform .5s;
-}
-.memory-card:active{
-    transform: scale(.97);
-    transition:transform .2s;
-}
-.front-face img{
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  .memory-card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+  }
+  .front-face img {
     max-width: 100%;
     max-height: 100%;
-}
-.front-face,
-.back-face{
-  font-size: 30px;
+  }
+  .front-face,
+  .back-face {
+    font-size: 30px;
     border: solid black 1px;
     display: flex;
     justify-content: center;
@@ -443,16 +301,177 @@ iframe {
     border-radius: 5px;
     background: white;
     backface-visibility: hidden;
-}
-.back-face{
+  }
+  .back-face {
     background-color: #d0e4f4;
-}
-.front-face{
+  }
+  .front-face {
     transform: rotateY(180deg);
-}
-.memory-card.flip{
+  }
+  .memory-card.flip {
     transform: rotateY(180deg);
+  }
 }
+/* Teléfono */
+@media screen and (max-width: 600px) {
+  .scene {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+  }
+  .imagenPrueba {
+    width: 400px;
+    height: auto;
+  }
+  h2 {
+    font-size: xx-large;
+  }
+  p {
+    font-size: x-large;
+  }
+  .doodle {
+    width: 108%;
+    height: 400px;
+    margin: -10px;
+    margin-bottom: -200px;
+  }
+  .letra_img {
+    width: 50px;
+    height: 50px;
+  }
+  .logo {
+    margin-top: -600px;
+    width: 300px;
+    height: auto;
+    padding-bottom: 70px;
+  }
+  .navigation {
+    text-align: center;
+  }
+
+  .section {
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section.active {
+    display: flex;
+    flex-direction: column;
+  }
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .dots {
+    display: flex;
+    flex-direction: column;
+    position: center;
+    align-items: start;
+  }
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .menuOption {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+    gap: 20px; /* Espacio entre las imágenes */
+  }
+
+  .menuOption p {
+    align-items: center;
+  }
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: #717171;
+  }
+  .vertical-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .character {
+    margin-left: auto;
+    width: 50px;
+    height: auto;
+  }
+  .memory-game {
+    width: 90%;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    margin-bottom: 50px;
+  }
+  .memory-card {
+    width: calc(50% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  .memory-card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+  }
+  .front-face img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .front-face,
+  .back-face {
+    font-size: 30px;
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: white;
+    backface-visibility: hidden;
+  }
+  .back-face {
+    background-color: #d0e4f4;
+  }
+  .front-face {
+    transform: rotateY(180deg);
+  }
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
 }
 
 .titleInstructions {
