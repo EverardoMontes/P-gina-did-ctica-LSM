@@ -2,7 +2,7 @@ let resultadoYoSoy = document.getElementById("resultadoSec3");
 
 let aciertosDivYoSoy = document.createElement("div");
 aciertosDivYoSoy.setAttribute("id", "aciertosDivYoSoy");
-aciertosDivYoSoy.classList.add("aciertosErrores")
+aciertosDivYoSoy.classList.add("aciertosErrores");
 let aciertosYoSoy = document.createElement("p");
 aciertosYoSoy.setAttribute("id", "aciertosYoSoy");
 let espacioYoSoy = document.createElement("br");
@@ -28,7 +28,7 @@ resultadoYoSoy.appendChild(espacioYoSoy);
 // Crear la sección de errores
 let erroresDivYoSoy = document.createElement("div");
 erroresDivYoSoy.setAttribute("id", "erroresDivYoSoy");
-erroresDivYoSoy.classList.add("aciertosErrores")
+erroresDivYoSoy.classList.add("aciertosErrores");
 let erroresYoSoy = document.createElement("p");
 erroresYoSoy.setAttribute("id", "erroresYoSoy");
 erroresYoSoy.textContent = "Errores: ";
@@ -54,7 +54,7 @@ resultadoYoSoy.appendChild(erroresDivYoSoy);
 // Crear la sección de bravo
 let bravoDivYoSoy = document.createElement("div");
 bravoDivYoSoy.setAttribute("id", "bravoDivYoSoy");
-bravoDivYoSoy.classList.add("aciertosErrores")
+bravoDivYoSoy.classList.add("aciertosErrores");
 let bravoYoSoy = document.createElement("p");
 bravoYoSoy.setAttribute("id", "bravoYoSoy");
 bravoYoSoy.textContent = "¡Bravo, muy bien!";
@@ -84,81 +84,78 @@ resultadoYoSoy.style.display = "none";
 
 // Función para verificar respuestas y actualizar los resultados
 function verificarRespuestas() {
-    // Añadir el contenedor de errores si aún no está en el DOM
-    resultadoYoSoy.appendChild(erroresDivYoSoy);
-  
-    // Obtener los elementos de la interfaz
-    let aciertos = document.getElementById("aciertosYoSoy");
-    let aciertosDiv = document.getElementById("aciertosDivYoSoy");
-    let errores = document.getElementById("erroresYoSoy");
-    let errorDiv = document.getElementById("erroresDivYoSoy");
-    let bravoDivision = document.getElementById("bravoDivYoSoy");
-  
-    // Reiniciar display y contenido de las secciones
-    aciertosDiv.style.display = "none";
-    errorDiv.style.display = "none";
-    bravoDivision.style.display = "none";
-    aciertos.textContent = "";
-    errores.textContent = "";
-  
-    // Array de inputs y respuestas correctas
-    let inputs = [
-      document.getElementById("input1"),
-      document.getElementById("input2"),
-      document.getElementById("input3"),
-      document.getElementById("input4"),
-      document.getElementById("input5"),
-      document.getElementById("input6")
-    ];
-  
-    let respuestasCorrectas = ["soy", "luis", "yo", "maria", "yo", "soy"];
-  
-    // Variable para contar los aciertos
-    let contador = 0;
-  
-    // Función auxiliar para desactivar el input correcto y marcar incorrecto si aplica
-    function desactivar(input, respuestaCorrecta) {
-      if (input.value.trim().toLowerCase() === respuestaCorrecta) {
-        input.disabled = true;
-        input.classList.remove("incorrect");
-        input.classList.add("correct");
-        return 1;
-      } else {
-        input.classList.add("incorrect");
-        return 0;
-      }
+  // Añadir el contenedor de errores si aún no está en el DOM
+  resultadoYoSoy.appendChild(erroresDivYoSoy);
+
+  // Obtener los elementos de la interfaz
+  let aciertos = document.getElementById("aciertosYoSoy");
+  let aciertosDiv = document.getElementById("aciertosDivYoSoy");
+  let errores = document.getElementById("erroresYoSoy");
+  let errorDiv = document.getElementById("erroresDivYoSoy");
+  let bravoDivision = document.getElementById("bravoDivYoSoy");
+
+  // Reiniciar display y contenido de las secciones
+  aciertosDiv.style.display = "none";
+  errorDiv.style.display = "none";
+  bravoDivision.style.display = "none";
+  aciertos.textContent = "";
+  errores.textContent = "";
+
+  // Array de inputs y respuestas correctas
+  let inputs = [
+    document.getElementById("input1"),
+    document.getElementById("input2"),
+    document.getElementById("input3"),
+    document.getElementById("input4"),
+    document.getElementById("input5"),
+    document.getElementById("input6"),
+  ];
+
+  let respuestasCorrectas = ["soy", "luis", "yo", "maria", "yo", "soy"];
+
+  // Variable para contar los aciertos
+  let contador = 0;
+
+  // Función auxiliar para desactivar el input correcto y marcar incorrecto si aplica
+  function desactivar(input, respuestaCorrecta) {
+    if (input.value.trim().toLowerCase() === respuestaCorrecta) {
+      input.disabled = true;
+      input.classList.remove("incorrect");
+      input.classList.add("correct");
+      return 1;
+    } else {
+      input.classList.add("incorrect");
+      return 0;
     }
-  
-    // Iterar sobre los inputs y respuestas
-    for (let i = 0; i < inputs.length; i++) {
-      contador += desactivar(inputs[i], respuestasCorrectas[i]);
-    }
-  
-    // Mostrar la cantidad de aciertos y errores
-    if (contador > 0 && contador < respuestasCorrectas.length) {
-      aciertos.textContent = "Aciertos: " + contador.toString();
-      aciertosDiv.style.display = "flex";
-    }
-  
-    if (contador !== respuestasCorrectas.length) {
-      errores.textContent = "Errores: " + (respuestasCorrectas.length - contador).toString();
-      errores.style.display = "flex";
-      errorDiv.style.display = "flex";
-    }
-  
-    // Mostrar mensaje de "¡Bravo!" si se acertaron todas
-    if (contador === respuestasCorrectas.length) {
-      bravoDivision.style.display = "flex";
-    }
-  
-    // Mostrar el contenedor de resultados
-    resultadoYoSoy.style.display = "flex";
   }
 
+  // Iterar sobre los inputs y respuestas
+  for (let i = 0; i < inputs.length; i++) {
+    contador += desactivar(inputs[i], respuestasCorrectas[i]);
+  }
 
+  // Mostrar la cantidad de aciertos y errores
+  if (contador > 0 && contador < respuestasCorrectas.length) {
+    aciertos.textContent = "Aciertos: " + contador.toString();
+    aciertosDiv.style.display = "flex";
+  }
 
+  if (contador !== respuestasCorrectas.length) {
+    errores.textContent =
+      "Errores: " + (respuestasCorrectas.length - contador).toString();
+    errores.style.display = "flex";
+    errorDiv.style.display = "flex";
+  }
 
-  
+  // Mostrar mensaje de "¡Bravo!" si se acertaron todas
+  if (contador === respuestasCorrectas.length) {
+    bravoDivision.style.display = "flex";
+  }
+
+  // Mostrar el contenedor de resultados
+  resultadoYoSoy.style.display = "flex";
+}
+
 // Elemento donde se mostrará el resultado
 let resultadoMeLlamo = document.getElementById("resultadoSec4");
 
@@ -178,7 +175,10 @@ botonAciertosMeLlamo.classList.add("iconlsmbutton", "verificar");
 botonAciertosMeLlamo.setAttribute("id", "modalAciertos");
 let imagenSenasAciertosMeLlamo = document.createElement("img");
 imagenSenasAciertosMeLlamo.setAttribute("src", "./imgs/manitas.png");
-imagenSenasAciertosMeLlamo.setAttribute("alt", "Icono clickeable para traducción a lengua de señas mexicana");
+imagenSenasAciertosMeLlamo.setAttribute(
+  "alt",
+  "Icono clickeable para traducción a lengua de señas mexicana"
+);
 
 botonAciertosMeLlamo.appendChild(imagenSenasAciertosMeLlamo);
 aciertosDivMeLlamo.appendChild(botonAciertosMeLlamo);
@@ -202,7 +202,10 @@ botonErroresMeLlamo.setAttribute("id", "modalErrores");
 
 let imagenSenasErroresMeLlamo = document.createElement("img");
 imagenSenasErroresMeLlamo.setAttribute("src", "./imgs/manitas.png");
-imagenSenasErroresMeLlamo.setAttribute("alt", "Icono clickeable para traducción a lengua de señas mexicana");
+imagenSenasErroresMeLlamo.setAttribute(
+  "alt",
+  "Icono clickeable para traducción a lengua de señas mexicana"
+);
 
 botonErroresMeLlamo.appendChild(imagenSenasErroresMeLlamo);
 erroresDivMeLlamo.appendChild(botonErroresMeLlamo);
@@ -212,7 +215,7 @@ resultadoMeLlamo.appendChild(erroresDivMeLlamo);
 // Crear la sección de bravo
 let bravoDivMeLlamo = document.createElement("div");
 bravoDivMeLlamo.setAttribute("id", "bravoDivMeLlamo");
-bravoDivMeLlamo.classList.add("aciertosErrores")
+bravoDivMeLlamo.classList.add("aciertosErrores");
 let bravoMeLlamo = document.createElement("p");
 bravoMeLlamo.setAttribute("id", "bravoMeLlamo");
 
@@ -225,7 +228,10 @@ botonBravoMeLlamo.setAttribute("id", "modalLoHicisteBien");
 
 let imagenSenasBravoMeLlamo = document.createElement("img");
 imagenSenasBravoMeLlamo.setAttribute("src", "./imgs/manitas.png");
-imagenSenasBravoMeLlamo.setAttribute("alt", "Icono clickeable para traducción a lengua de señas mexicana");
+imagenSenasBravoMeLlamo.setAttribute(
+  "alt",
+  "Icono clickeable para traducción a lengua de señas mexicana"
+);
 
 botonBravoMeLlamo.appendChild(imagenSenasBravoMeLlamo);
 bravoDivMeLlamo.appendChild(botonBravoMeLlamo);
@@ -237,147 +243,142 @@ resultadoMeLlamo.style.display = "none";
 
 // Función para verificar respuestas y actualizar los resultados
 function verificarRespuestas2() {
-    // Obtener los elementos de la interfaz
-    let aciertos = document.getElementById("aciertosMeLlamo");
-    let aciertosDiv = document.getElementById("aciertosDivMeLlamo");
-    let errores = document.getElementById("erroresMeLlamo");
-    let errorDiv = document.getElementById("erroresDivMeLlamo");
-    let bravoDivision = document.getElementById("bravoDivMeLlamo");
+  // Obtener los elementos de la interfaz
+  let aciertos = document.getElementById("aciertosMeLlamo");
+  let aciertosDiv = document.getElementById("aciertosDivMeLlamo");
+  let errores = document.getElementById("erroresMeLlamo");
+  let errorDiv = document.getElementById("erroresDivMeLlamo");
+  let bravoDivision = document.getElementById("bravoDivMeLlamo");
 
-    // Reiniciar display y contenido de las secciones
-    aciertosDiv.style.display = "none";
-    errorDiv.style.display = "none";
-    bravoDivision.style.display = "none";
-    aciertos.textContent = "";
-    errores.textContent = "";
+  // Reiniciar display y contenido de las secciones
+  aciertosDiv.style.display = "none";
+  errorDiv.style.display = "none";
+  bravoDivision.style.display = "none";
+  aciertos.textContent = "";
+  errores.textContent = "";
 
-    // Array de inputs y respuestas correctas
-    let inputs = [
-        document.getElementById("input2-1"),
-        document.getElementById("input2-2"),
-        document.getElementById("input2-3"),
-        document.getElementById("input2-4"),
-        document.getElementById("input2-5"),
-        document.getElementById("input2-6")
-    ];
+  // Array de inputs y respuestas correctas
+  let inputs = [
+    document.getElementById("input2-1"),
+    document.getElementById("input2-2"),
+    document.getElementById("input2-3"),
+    document.getElementById("input2-4"),
+    document.getElementById("input2-5"),
+    document.getElementById("input2-6"),
+  ];
 
-    let respuestasCorrectas = ["llamo", "luis", "me", "maria", "llamo", "me"];
+  let respuestasCorrectas = ["llamo", "luis", "me", "maria", "llamo", "me"];
 
-    // Variable para contar los aciertos
-    let contador = 0;
+  // Variable para contar los aciertos
+  let contador = 0;
 
-    // Función auxiliar para desactivar el input correcto y marcar incorrecto si aplica
-    function desactivar(input, respuestaCorrecta) {
-        if (input.value.trim().toLowerCase() === respuestaCorrecta) {
-            input.disabled = true;
-            input.classList.remove("incorrect");
-            input.classList.add("correct");
-            return 1;
-        } else {
-            input.classList.add("incorrect");
-            return 0;
-        }
+  // Función auxiliar para desactivar el input correcto y marcar incorrecto si aplica
+  function desactivar(input, respuestaCorrecta) {
+    if (input.value.trim().toLowerCase() === respuestaCorrecta) {
+      input.disabled = true;
+      input.classList.remove("incorrect");
+      input.classList.add("correct");
+      return 1;
+    } else {
+      input.classList.add("incorrect");
+      return 0;
     }
+  }
 
-    // Iterar sobre los inputs y respuestas
-    for (let i = 0; i < inputs.length; i++) {
-        contador += desactivar(inputs[i], respuestasCorrectas[i]);
-    }
+  // Iterar sobre los inputs y respuestas
+  for (let i = 0; i < inputs.length; i++) {
+    contador += desactivar(inputs[i], respuestasCorrectas[i]);
+  }
 
-    // Mostrar la cantidad de aciertos y errores
-    if (contador > 0 && contador < respuestasCorrectas.length) {
-        aciertos.textContent = "Aciertos: " + contador.toString();
-        aciertosDiv.style.display = "flex";
-    }
+  // Mostrar la cantidad de aciertos y errores
+  if (contador > 0 && contador < respuestasCorrectas.length) {
+    aciertos.textContent = "Aciertos: " + contador.toString();
+    aciertosDiv.style.display = "flex";
+  }
 
-    if (contador !== respuestasCorrectas.length) {
-        errores.textContent = "Errores: " + (respuestasCorrectas.length - contador).toString();
-        errorDiv.style.display = "flex";
-    }
+  if (contador !== respuestasCorrectas.length) {
+    errores.textContent =
+      "Errores: " + (respuestasCorrectas.length - contador).toString();
+    errorDiv.style.display = "flex";
+  }
 
-    // Mostrar mensaje de "¡Bravo!" si se acertaron todas
-    if (contador === respuestasCorrectas.length) {
-        bravoDivision.style.display = "flex";
-    }
+  // Mostrar mensaje de "¡Bravo!" si se acertaron todas
+  if (contador === respuestasCorrectas.length) {
+    bravoDivision.style.display = "flex";
+  }
 
-    // Mostrar el contenedor de resultados
-    resultadoMeLlamo.style.display = "flex";
+  // Mostrar el contenedor de resultados
+  resultadoMeLlamo.style.display = "flex";
 }
-
-
 
 /////////// CÓDIGO DEL MEMORAMA
 
-const cards=document.querySelectorAll('.memory-card');
+const cards = document.querySelectorAll(".memory-card");
 
-let hasFlippedCard=false;
-let lockBoard=false;
+let hasFlippedCard = false;
+let lockBoard = false;
 let firstCard, secondCard;
-let cardsFlippedCounter=0;
+let cardsFlippedCounter = 0;
 
-function flipCard(){
-    if(lockBoard) return;
-    if(this=== firstCard) return;
+function flipCard() {
+  if (lockBoard) return;
+  if (this === firstCard) return;
 
-    this.classList.add('flip');
-    
-    if(!hasFlippedCard){
-        hasFlippedCard=true;
-        firstCard=this;
+  this.classList.add("flip");
 
-        return;
-    }
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
 
-    hasFlippedCard=false;
-    secondCard=this;   
+    return;
+  }
 
-    checkForMatch();
+  hasFlippedCard = false;
+  secondCard = this;
 
+  checkForMatch();
 }
-function checkForMatch(){
-    let isMatch = firstCard.dataset.name===secondCard.dataset.name
-    isMatch ? disableCards():unflipCards();
+function checkForMatch() {
+  let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+  isMatch ? disableCards() : unflipCards();
 }
-function disableCards(){
-    firstCard.removeEventListener('click',flipCard);
-    secondCard.removeEventListener('click',flipCard);
-    cardsFlippedCounter+=2;
-    const firstFrontFace = firstCard.querySelector('.front-face');
-    const secondFrontFace = secondCard.querySelector('.front-face');
+function disableCards() {
+  firstCard.removeEventListener("click", flipCard);
+  secondCard.removeEventListener("click", flipCard);
+  cardsFlippedCounter += 2;
+  const firstFrontFace = firstCard.querySelector(".front-face");
+  const secondFrontFace = secondCard.querySelector(".front-face");
 
-    if (firstFrontFace && secondFrontFace) {
-        firstFrontFace.style.borderColor = '#2cb7b3';
-        secondFrontFace.style.borderColor = '#2cb7b3';
-    }
+  if (firstFrontFace && secondFrontFace) {
+    firstFrontFace.style.border = "solid #2cb7b3 4px";
+    secondFrontFace.style.border = "solid #2cb7b3 4px";
+  }
 
-    if(cardsFlippedCounter==8){
-        const resultadoDiv = document.getElementById('resultadoSec6');
-        resultadoDiv.style.display = 'block';
-    }
+  if (cardsFlippedCounter == 8) {
+    const resultadoDiv = document.getElementById("resultadoSec6");
+    resultadoDiv.style.display = "block";
+  }
+  resetBoard();
+}
+function unflipCards() {
+  lockBoard = true;
+  setTimeout(() => {
+    firstCard.classList.remove("flip");
+    secondCard.classList.remove("flip");
+
     resetBoard();
+  }, 4500);
 }
-function unflipCards(){
-    lockBoard=true;
-    setTimeout(()=>{
-        firstCard.classList.remove('flip');
-        secondCard.classList.remove('flip');
-
-        resetBoard();
-    },4500);
-    
-}
-function resetBoard(){
-    [hasFlippedCard, lockBoard]=[false,false];
-    [firstCard,secondCard]=[null,null]
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
 }
 
-(function shuffle(){
-    cards.forEach(card =>{
-        let randomPos=Math.floor(Math.random()*8);
-        card.style.order=randomPos;
-    });
+(function shuffle() {
+  cards.forEach((card) => {
+    let randomPos = Math.floor(Math.random() * 8);
+    card.style.order = randomPos;
+  });
 })();
 
-cards.forEach(card => card.addEventListener('click',flipCard))
-
-
+cards.forEach((card) => card.addEventListener("click", flipCard));
