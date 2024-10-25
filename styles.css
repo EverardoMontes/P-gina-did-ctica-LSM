@@ -65,8 +65,9 @@ iframe {
   }
   .nuevas4{
     position: absolute;
-    padding-top: 470px;
-    padding-left: 190px;
+    padding-top: 465px;
+    padding-left: 160px;
+    font-size: 14px;
   }
   .YoSoyImg{
     display: flex;
@@ -446,7 +447,8 @@ iframe {
   .nuevas4{
     position: absolute;
     padding-top: 460px;
-    padding-left: 178px;
+    padding-left: 159px;
+    font-size: 14px;
   }
 
 
