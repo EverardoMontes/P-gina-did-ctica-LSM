@@ -32,7 +32,76 @@ iframe {
     width: 450px;
     height: auto;
   }
-
+  .rosa{
+    background-color: pink;
+    text-decoration: none;
+  }
+  .nuevasFormasImg{
+    position:static;
+    white-space: nowrap; 
+    background-image: url("./imgs/ejercicio/casaRosa.jpg");
+    background-repeat: no-repeat;
+    background-size: contain; 
+    padding-bottom: 400px;
+    width: 500px;
+    height: 700px;
+    
+  }
+  .nuevas1{
+    position: absolute;
+    padding-top: 80px;
+    padding-right: 30px;
+  }
+  .nuevas2{
+    position: absolute;
+    padding-top: 100px;
+    padding-left: 160px;
+    font-size: 13px;
+  }
+  .nuevas3{
+    position: absolute;
+    padding-top: 430px;
+    padding-right: 30px;
+  }
+  .nuevas4{
+    position: absolute;
+    padding-top: 470px;
+    padding-left: 190px;
+  }
+  .YoSoyImg{
+    display: flex;
+    white-space: nowrap; 
+    
+    background-image: url("./imgs/ejercicio/YoSoy.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 450px;
+    height: 450px;
+    
+  }
+  .YoSoyImg .yosoy1{
+    position: absolute;
+    padding-bottom: 400px;
+    padding-left: 140px;
+    
+  }
+  .YoSoyImg .yosoy2{
+    position: absolute;
+    padding-top: 190px;
+    
+    
+  }
+  .YoSoyImg .yosoy3{
+    position: absolute;
+    padding-top: 190px;
+    padding-left: 140px;
+    
+  }
+  .YoSoyImg .yosoy4{
+    position: absolute;
+    padding-top: 190px;
+    padding-left: 280px;
+  }
   .dragButton1,
   .dragButton2,
   .dragButton3,
@@ -343,6 +412,78 @@ iframe {
   p {
     font-size: x-large;
   }
+  .rosa{
+    background-color: pink;
+    text-decoration: none;
+  }
+  .nuevasFormasImg{
+    position:static;
+    white-space: nowrap; 
+    background-image: url("./imgs/ejercicio/casaRosa.jpg");
+    background-repeat: no-repeat;
+    background-size: contain; 
+    padding-bottom: 400px;
+    width: 500px;
+    height: 700px;
+    
+  }
+  .nuevas1{
+    position: absolute;
+    padding-top: 80px;
+    padding-right: 30px;
+  }
+  .nuevas2{
+    position: absolute;
+    padding-top: 100px;
+    padding-left: 160px;
+    font-size: 13px;
+  }
+  .nuevas3{
+    position: absolute;
+    padding-top: 430px;
+    padding-right: 30px;
+  }
+  .nuevas4{
+    position: absolute;
+    padding-top: 460px;
+    padding-left: 178px;
+  }
+
+
+  .YoSoyImg{
+    display: flex;
+    align-self: center;
+    background-image: url("./imgs/ejercicio/YoSoy.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 350px;
+    height: 500px;
+    
+  }
+  
+   .YoSoyImg .yosoy1{
+    position: absolute;
+    padding-bottom: 450px;
+    padding-left: 100px;
+    
+  }
+  .YoSoyImg .yosoy2{
+    position: absolute;
+    padding-top: 140px;
+    
+    
+  }
+  .YoSoyImg .yosoy3{
+    position: absolute;
+    padding-top: 160px;
+    padding-left: 85px;
+    
+  }
+  .YoSoyImg .yosoy4{
+    position: absolute;
+    padding-top: 160px;
+    padding-left: 215px;
+  } 
   .doodle {
     width: 108%;
     height: 400px;
@@ -393,6 +534,8 @@ iframe {
     width: 450px;
     height: auto;
   }
+
+  
   .dots {
     display: flex;
     flex-direction: column;
