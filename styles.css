@@ -14,6 +14,12 @@ iframe {
   display: none;
 }
 
+.aciertosErrores{
+  align-items: center;
+  height: 80px;
+  width: fit-content;
+}
+
 @media (min-width: 1024px) {
   .imgExpose {
     display: flex;
@@ -147,7 +153,7 @@ iframe {
   .front-face,
   .back-face {
     font-size: 24px;
-    border: solid black 1px;
+    border: solid black 2px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,7 +166,7 @@ iframe {
     backface-visibility: hidden;
   }
   .memory-card.memo-correct {
-    border: solid green 2px;
+    border: solid #2cb7b3 2px;
   }
   .back-face {
     background-color: #d0e4f4;
@@ -252,6 +258,7 @@ iframe {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .container {
     width: 90%;
@@ -434,6 +441,7 @@ iframe {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .container {
     width: 90%;
@@ -579,6 +587,7 @@ iframe {
   width: 50%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .vertical-container button {
@@ -631,6 +640,9 @@ button {
 
 .correct {
   color: #2cb7b3;
+}
+.incorrect{
+  color:red;
 }
 
 .resultados {
