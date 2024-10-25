@@ -87,9 +87,13 @@ function desactivar(div, palabra) {
       div.parentNode.lastChild.previousSibling.disabled = true;
     }
     div.setAttribute("class", "correct");
+    if (div.classList.contains("clase2")) {
+      div.classList.remove("incorrect");
+    }
     return 1;
   } else {
     console.log("error");
+    div.setAttribute("class", "incorrect");
     return 0;
   }
 }

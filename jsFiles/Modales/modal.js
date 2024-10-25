@@ -21,11 +21,12 @@ window.onload = function () {
     modalNuevasFormasDePresentarnos: `https://www.youtube.com/embed/LRRLQZhCwBs?si=4oNFunX9qC0XkrOc`,
     modalRegresar: `https://www.youtube.com/embed/pV3O0vJA_84?si=DYpgJJZQIbpGbotV`,
     modalSiguiente: `https://www.youtube.com/embed/WHciLN4oqZk?si=ouUWc4obec4CltLn`,
-    modalOrdenaLasLetrasDeCadaNombre:`https://www.youtube.com/embed/GVjSW21ZPBk?si=BojeQmwz6an4Wfdx`,
-    modalSoyJavier:``,
-    modalSoyTeresa:``,
-    modalSoyLuis:``,
-    modalSoyPablo:``,
+    modalOrdenaLasLetrasDeCadaNombre: `https://www.youtube.com/embed/GVjSW21ZPBk?si=BojeQmwz6an4Wfdx`,
+    modalSoyJavier: ``,
+    modalSoyTeresa: ``,
+    modalSoyLuis: ``,
+    modalSoyPablo: ``,
+    modalObservaElEjemploYRelacionaElPersonajeConSuNombre: `https://www.youtube.com/embed/f8jPPIpONPE?si=ziUKjlphGeN_Wf_m`,
   };
   // Al hacer clic en el botón, mostrar el modal
   buttons.forEach((button) => {
