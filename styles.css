@@ -559,25 +559,34 @@ iframe {
     bottom: 100px;
   }
   .nuevas1 {
-    position: absolute;
-    right: 310px;
-    top: 320px;
+    position: relative;
+    left: 120px;
+    top: 60px;
     z-index: 1;
+    width: fit-content;
+    height: fit-content;
   }
   .nuevas2 {
-    position: absolute;
-    padding-top: 100px;
-    padding-left: 160px;
+    position: relative;
+    top: 15px;
+    left: 165px;
     font-size: 12px;
+    width: fit-content;
+    height: fit-content;
   }
   .nuevas3 {
-    position: absolute;
-    bottom: 0px;
-    left: 220px;
+    position: relative;
+    top: -100px;
+    left: 120px;
+    width: fit-content;
+    height: fit-content;
   }
   .nuevas4 {
-    position: absolute;
-    bottom: 70px;
+    position: relative;
+    top: 20px;
+    left:160px;
+    width: fit-content;
+    height: fit-content;
   }
   .YoSoyImg {
     display: flex;
@@ -590,30 +599,30 @@ iframe {
   }
 
   .YoSoyImg .yosoy1 {
-    position: absolute;
-    margin-bottom: 450px;
-    margin-left: 100px;
+    position: relative;
+    top: -10px;
+    left: 10px;
     width: fit-content;
     height: fit-content;
   }
   .YoSoyImg .yosoy2 {
-    position: absolute;
-    margin-top: 130px;
-    margin-right: 15px;
+    position: relative;
+    top:45px;
+    left:-35px;
     width: fit-content;
     height: fit-content;
   }
   .YoSoyImg .yosoy3 {
-    position: absolute;
-    margin-top: 140px;
-    margin-left: 85px;
+    position: relative;
+    top: 45px;
+    left: -5px;
     width: fit-content;
     height: fit-content;
   }
   .YoSoyImg .yosoy4 {
-    position: absolute;
-    margin-top: 160px;
-    margin-left: 209px;
+    position: relative;
+    top: 45px;
+    left: 35px;
     width: fit-content;
     height: fit-content;
   }
