@@ -584,7 +584,7 @@ iframe {
   .nuevas4 {
     position: relative;
     top: 20px;
-    left:160px;
+    left: 160px;
     width: fit-content;
     height: fit-content;
   }
@@ -607,8 +607,8 @@ iframe {
   }
   .YoSoyImg .yosoy2 {
     position: relative;
-    top:45px;
-    left:-35px;
+    top: 45px;
+    left: -35px;
     width: fit-content;
     height: fit-content;
   }
@@ -925,6 +925,7 @@ button {
 
 .correct {
   color: #2cb7b3;
+  pointer-events: none;
 }
 .incorrect {
   color: red;

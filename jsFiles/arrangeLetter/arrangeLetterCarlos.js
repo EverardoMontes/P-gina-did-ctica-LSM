@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
           espacio.textContent = "";
           boton.disabled = false;
           boton.setAttribute("draggable", true);
+          spacesContainer.classList.remove("incorrect");
         }
       });
       return;
