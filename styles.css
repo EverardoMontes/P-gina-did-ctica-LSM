@@ -428,6 +428,9 @@ iframe {
     align-items: center;
     margin-top: 20px;
   }
+  .controlsCards {
+    border: 10px;
+  }
   .menuOption {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
@@ -699,6 +702,9 @@ iframe {
     align-items: center;
     margin-top: 20px;
   }
+  .controlsCards {
+    border: 10px;
+  }
   .menuOption {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
@@ -837,6 +843,20 @@ iframe {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  gap: 20px;
+}
+.controlsCards {
+  border: 3px solid #2cb7b3;
+  /* X-offset, Y-offset, blur radius, color */
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+.controlsCards button {
+  height: fit-content;
 }
 
 .character {
