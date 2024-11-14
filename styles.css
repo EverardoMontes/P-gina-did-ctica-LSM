@@ -37,43 +37,41 @@ iframe {
     text-decoration: none;
   }
   .nuevasFormasImg {
+    background-image: url("./imgs/ejercicio/casaRosaReal.png");
     position: static;
     white-space: nowrap;
-    background-image: url("./imgs/ejercicio/casaRosa.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     padding-bottom: 400px;
-    width: 500px;
-    height: 700px;
-    display: flex;
+    width: 600px;
+    height: 840px;
   }
 
   .div2nuevas {
-    position: absolute;
+    position: relative;
     bottom: 240px;
     left: 420px;
   }
   .nuevas1 {
-    position: absolute;
-    right: 820px;
-    top: 300px;
-    z-index: 1;
+    position: relative;
+    margin-right: 240px;
   }
   .nuevas2 {
-    position: absolute;
-    padding-top: 100px;
-    padding-left: 165px;
-    font-size: 12px;
+    position: relative;
+    margin-top: -40px;
+    margin-left: -110px;
+    font-size: 18px;
   }
   .nuevas3 {
-    position: absolute;
-    padding-left: 180px;
-    top: -35px;
+    position: relative;
+    margin-top: 420px;
+    margin-right: 250px;
   }
   .nuevas4 {
-    position: absolute;
-    left: 240px;
-    font-size: 14px;
+    position: relative;
+    margin-top: -20px;
+    margin-right: 120px;
+    font-size: 18px;
   }
   .YoSoyImg {
     display: flex;
@@ -277,9 +275,9 @@ iframe {
     text-decoration: none;
   }
   .nuevasFormasImg {
+    background-image: url("./imgs/ejercicio/casaRosa.jpg");
     position: static;
     white-space: nowrap;
-    background-image: url("./imgs/ejercicio/casaRosa.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     padding-bottom: 400px;
@@ -318,9 +316,9 @@ iframe {
   }
 
   .YoSoyImg {
+    background-image: url("./imgs/ejercicio/YoSoy.jpg");
     display: flex;
     align-self: center;
-    background-image: url("./imgs/ejercicio/YoSoy.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 550px;
@@ -531,6 +529,15 @@ iframe {
     align-items: center;
     width: 99%;
   }
+
+  .dragButton1,
+  .dragButton2,
+  .dragButton3,
+  .dragButton4,
+  .dragButton5,
+  .dragButton6 {
+    font-size: x-large;
+  }
   .imagenPrueba {
     width: 400px;
     height: auto;
@@ -546,9 +553,9 @@ iframe {
     text-decoration: none;
   }
   .nuevasFormasImg {
+    background-image: url("./imgs/ejercicio/casaRosa.jpg");
     position: static;
     white-space: nowrap;
-    background-image: url("./imgs/ejercicio/casaRosa.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     padding-bottom: 400px;

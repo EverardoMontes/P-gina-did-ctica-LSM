@@ -115,7 +115,13 @@ function verificarRespuestas() {
 
   // Variable para contar los aciertos
   let contador = 0;
+  //Se les añade el onclick para quitar incorrect
 
+  inputs.forEach((input) => {
+    input.addEventListener("click", () => {
+      input.classList.remove("incorrect");
+    });
+  });
   // Función auxiliar para desactivar el input correcto y marcar incorrecto si aplica
   function desactivar(input, respuestaCorrecta) {
     if (input.value.trim().toLowerCase() === respuestaCorrecta) {
