@@ -2,7 +2,7 @@ let javier1 = document.getElementById("javierMi");
 let javier2 = document.getElementById("javierNombre");
 let javier3 = document.getElementById("javierEs");
 let javier4 = document.getElementById("javierJavier");
-let javier = document.getElementById("javiTeng");
+let javier5 = document.getElementById("javiTeng");
 
 let maria1 = document.getElementById("mariaMe");
 let maria2 = document.getElementById("mariaLlamo");
@@ -72,16 +72,16 @@ function respuestasTarjetas1() {
     });
   }
 
-  if (javier.value.toLowerCase() === "tengo") {
-    javier.classList.add("correct");
-    if (javier.classList.contains("incorrect")) {
-      javier.classList.remove("incorrect");
+  if (javier5.value.toLowerCase() === "tengo") {
+    javier5.classList.add("correct");
+    if (javier5.classList.contains("incorrect")) {
+      javier5.classList.remove("incorrect");
     }
   } else {
-    javier.classList.add("incorrect");
-    javier.addEventListener("click", () => {
-      if (javier.classList.contains("incorrect")) {
-        javier.classList.remove("incorrect");
+    javier5.classList.add("incorrect");
+    javier5.addEventListener("click", () => {
+      if (javier5.classList.contains("incorrect")) {
+        javier5.classList.remove("incorrect");
       }
     });
   }
