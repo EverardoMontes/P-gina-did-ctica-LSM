@@ -2,10 +2,10 @@ let javier = document.getElementById("javierTengo");
 let maria = document.getElementById("mariaTengo");
 let carlos1 = document.getElementById("soyCarlos");
 let carlos2 = document.getElementById("carlostengo");
-let diana1 = document.getElementById("miDiana");
-let diana2 = document.getElementById("nombreDiana");
-let diana3 = document.getElementById("esDiana");
-let diana4 = document.getElementById("dianaTengo");
+let diana11 = document.getElementById("miDiana");
+let diana22 = document.getElementById("nombreDiana");
+let diana33 = document.getElementById("esDiana");
+let diana44 = document.getElementById("dianaTengo");
 
 function verificarEdad1() {
   if (javier.value === "tengo" || javier.value === "Tengo") {
@@ -36,55 +36,55 @@ function verificarEdad1() {
   }
 }
 function verificarEdad2() {
-  if (diana1.value === "mi" || diana1.value === "Mi") {
-    diana1.classList.add("correct");
-    if (diana1.classList.contains("incorrect")) {
-      diana1.classList.remove("incorrect");
+  if (diana11.value === "mi" || diana11.value === "Mi") {
+    diana11.classList.add("correct");
+    if (diana11.classList.contains("incorrect")) {
+      diana11.classList.remove("incorrect");
     }
   } else {
-    diana1.classList.add("incorrect");
-    diana1.addEventListener("click", () => {
-      if (diana1.classList.contains("incorrect")) {
-        diana1.classList.remove("incorrect");
+    diana11.classList.add("incorrect");
+    diana11.addEventListener("click", () => {
+      if (diana11.classList.contains("incorrect")) {
+        diana11.classList.remove("incorrect");
       }
     });
   }
-  if (diana2.value === "nombre" || diana2.value === "NOMBRE") {
-    diana2.classList.add("correct");
-    if (diana2.classList.contains("incorrect")) {
-      diana2.classList.remove("incorrect");
+  if (diana22.value === "nombre" || diana22.value === "NOMBRE") {
+    diana22.classList.add("correct");
+    if (diana22.classList.contains("incorrect")) {
+      diana22.classList.remove("incorrect");
     }
   } else {
-    diana2.classList.add("incorrect");
+    diana22.classList.add("incorrect");
     diana2.addEventListener("click", () => {
-      if (diana2.classList.contains("incorrect")) {
-        diana2.classList.remove("incorrect");
+      if (diana22.classList.contains("incorrect")) {
+        diana22.classList.remove("incorrect");
       }
     });
   }
-  if (diana3.value === "ES" || diana3.value === "es") {
-    diana3.classList.add("correct");
-    if (diana3.classList.contains("incorrect")) {
-      diana3.classList.remove("incorrect");
+  if (diana33.value === "ES" || diana33.value === "es") {
+    diana33.classList.add("correct");
+    if (diana33.classList.contains("incorrect")) {
+      diana33.classList.remove("incorrect");
     }
   } else {
-    diana3.classList.add("incorrect");
-    diana3.addEventListener("click", () => {
-      if (diana3.classList.contains("incorrect")) {
-        diana3.classList.remove("incorrect");
+    diana33.classList.add("incorrect");
+    diana33.addEventListener("click", () => {
+      if (diana33.classList.contains("incorrect")) {
+        diana33.classList.remove("incorrect");
       }
     });
   }
-  if (diana4.value === "tengo" || diana4.value === "Tengo") {
-    diana4.classList.add("correct");
-    if (diana4.classList.contains("incorrect")) {
-      diana4.classList.remove("incorrect");
+  if (diana44.value === "tengo" || diana44.value === "Tengo") {
+    diana44.classList.add("correct");
+    if (diana44.classList.contains("incorrect")) {
+      diana44.classList.remove("incorrect");
     }
   } else {
-    diana4.classList.add("incorrect");
-    diana4.addEventListener("click", () => {
-      if (diana4.classList.contains("incorrect")) {
-        diana4.classList.remove("incorrect");
+    diana44.classList.add("incorrect");
+    diana44.addEventListener("click", () => {
+      if (diana44.classList.contains("incorrect")) {
+        diana44.classList.remove("incorrect");
       }
     });
   }
