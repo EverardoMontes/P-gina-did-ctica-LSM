@@ -26,7 +26,20 @@ window.onload = function () {
     modalSoyTeresa: ``,
     modalSoyLuis: ``,
     modalSoyPablo: ``,
+    modalObservaElEjemploYCompletaLasTarjetasDePresentacion: `https://www.youtube.com/embed/xNPzHTFVNx0?si=B880vLsHmLq9kMHI`,
+    modalEscribelapalabraqueFalta: `https://www.youtube.com/embed/hQzO3k0Hi18?si=LiJ4833KvamqFGlO`,
     modalObservaElEjemploYRelacionaElPersonajeConSuNombre: `https://www.youtube.com/embed/f8jPPIpONPE?si=ziUKjlphGeN_Wf_m`,
+    modalEncuentroDeVecinos: ``,
+    modalmiedad: `https://www.youtube.com/embed/foFml4xJWNY?si=8-8gPpGh2pwQjcSu`,
+    modalLeeyRelacionaColumnas: `https://www.youtube.com/embed/32YwRcwFOGc?si=w8Q3NCSJb79yxz6g`,
+    modalsoyluistengo8años: ``,
+    modalRecordemosquienesquien: ``,
+    modalElenaViveEnCasaVerde: `https://www.youtube.com/embed/70N2NsG9ZZE?si=ImT1dZNY_ex7cOMj`,
+    modalJavierViveEnCasaVerde: `https://www.youtube.com/embed/EDuBKzUM5N4?si=Y7SmxN8zQ0UPyJ29`,
+    modalHola: `https://www.youtube.com/embed/OUH3Upbb-MI?si=4s3Dg2KFFIAdMtvT`,
+    modalHolaSiClaro: `https://www.youtube.com/embed/K1ZikGwotpc?si=EFmum9bBjaFqCrKn`,
+    modalCarlosViveEnCasaAmarilla: `https://www.youtube.com/embed/FGP_TUcEu_s?si=BdFoUK9rFKLNOviX`,
+    modalDianaViveEnCasaRosa: `https://www.youtube.com/embed/q6rfwgW7Z_E?si=JrPpyuEvxCUCyZaR`,
   };
   // Al hacer clic en el botón, mostrar el modal
   buttons.forEach((button) => {

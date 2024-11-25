@@ -23,36 +23,90 @@ iframe {
   height: 80px;
   width: fit-content;
 }
-/* Aqui va de relacionar columnas */
-/* Asegura que el lienzo se superponga a los elementos */
-#gameCanvas {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
-  width: 100%;
-  height: 100%;
-}
 
-/* Para destacar elementos seleccionados */
+/* Para destacar elementos seleccionados
 .selected {
   outline: 2px solid blue;
 }
 
 /* Estilo para elementos bloqueados */
-.inalterable {
+/* .inalterable {
   pointer-events: none;
   opacity: 0.5;
-}
+} */ 
 
-/* Canvas para las líneas de conexión */
+/* .scene {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+} */
+
 canvas {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Para que el canvas no interfiera con los clics en otros elementos */
+  z-index: 0;
+  pointer-events: none;
 }
+
+.relacionar {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 20px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.columnaRelacion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.text-item,
+.image-item {
+  padding: 10px;
+  background: lightblue;
+  border: 1px solid #000;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.image-item {
+  background: none;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.locked {
+  background: lightgray;
+  cursor: not-allowed;
+}
+
+.selected {
+  border: 2px solid blue;
+}
+
+.verify-btn {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: lightgreen;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
 @media (min-width: 1024px) {
   .imgExpose {
     display: flex;
@@ -66,44 +120,6 @@ canvas {
     height: auto;
   }
 
-  .relacionar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    position: relative;
-  }
-
-  /* Columnas izquierda y derecha */
-  .columnaRelacion {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    z-index: 2; /* Asegura que estén sobre el canvas */
-  }
-
-  /* Estilos para los textos de la columna izquierda */
-  .columnaRelacion span {
-    padding: 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    background-color: #fff;
-    cursor: pointer;
-    text-align: center;
-  }
-
-  /* Estilos para las imágenes de la columna derecha */
-  .columnaRelacion img {
-    width: 100px;
-    height: auto;
-    border: 1px solid #000;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #fff;
-  }
 
   /* Estilos para elementos seleccionados */
   .selected {
@@ -1360,13 +1376,6 @@ canvas {
     height: 700px;
     display: flex;
   }
-  #gameCanvas {
-    width: 100%;
-    height: 100%;
-  }
-  canvas {
-    pointer-events: none; /* Para que el canvas no interfiera con los clics en otros elementos */
-  }
   .nuevasFormasImg {
     background-image: url("./imgs/ejercicio/casaRosa.jpg");
     position: static;
@@ -1574,47 +1583,6 @@ canvas {
     left: 35px;
     width: fit-content;
     height: fit-content;
-  }
-  .relacionar {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .columnaRelacion {
-    width: 40%;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  .columnaRelacion img {
-    width: 100px;
-    height: auto;
-    border: 1px solid #000;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #fff;
-  }
-
-  .columnaRelacion span {
-    padding: 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    background-color: #fff;
-    cursor: pointer;
-    text-align: center;
-  }
-
-  .columnaRelacion img {
-    width: 80px;
   }
   .doodle {
     width: 108%;
@@ -2050,6 +2018,7 @@ canvas {
 
 .container span {
   font-size: 1.5em;
+  
 }
 
 .input {
