@@ -244,3 +244,8 @@ function respuestasTarjetas2() {
     });
   }
 }
+
+function respuestasTarjetas() {
+  respuestasTarjetas1();
+  respuestasTarjetas2();
+}

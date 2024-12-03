@@ -115,3 +115,8 @@ function verificarEdad2() {
     });
   }
 }
+
+function verificarEdad() {
+  verificarEdad1();
+  verificarEdad2();
+}
