@@ -1,3 +1,20 @@
+//PARA AGREGAR CUALQUIER MODAL SE SIGUEN LAS SIGUIENTES INSTRUCCIONES:
+//----------------------------------------------------------------
+//Simplemente creas el botóon html de las manitas y lo pones en el lugar que mejor te parezca dentro del html, la plantilla es la siguiente:
+/* <button class="iconlsmbutton" id="">
+  <img
+    src="./imgs/manitas.png"
+    alt="Icono clickeable para traducción a lengua de señas mexicana"
+  />
+</button>; */
+// y en el apartado id del button, le añades el nombre del modal que quieres que aparezca ahí
+//Por facilidad decidimos empezar todos los nombres con "modal" y que tengan un nombre explícito de lo que dirá el modal
+//una vez añadida la id del button, entra abajo en el diccionario de modales existentes y añade nombre del modal nuevo(key) y vinculo html del
+//embebido de youtube(key). Cuando le das insertar en html a un video de youtube te da una etiqueta de iframe, el link embebido está dentro
+//de esa etiqueta de iframe, solo copiala y pegala como value de la key.
+//Ese es todo el proceso para añadir un nuevo modal.
+//ALGUNOS MODALES YA ESTÁN DEFINIDOS, PERO DADO QUE AL MOMENTO DE ENTREGAR ESTE CÓDIGO AÚN NO SE GRABAN LOS VIDEOS, EL LINK EMBEBIDO ESTÁ EN BLANCO
+//FAVOR DE REVISAR SI EL MODAL QUE INTENTA INGRESAR YA ESTÁ DEFINIDO PERO CON UN ENLACE VACÍO.
 window.onload = function () {
   var modal = document.getElementById("emergente");
   const buttons = document.querySelectorAll('[id*="modal"]');
