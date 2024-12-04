@@ -23,6 +23,11 @@ iframe {
   height: 80px;
   width: fit-content;
 }
+.imagenTarjetas {
+  width: 500px;
+  height: 380px;
+  margin: 20px;
+}
 /* Aqui va de relacionar columnas */
 /* Asegura que el lienzo se superponga a los elementos */
 #gameCanvas {
