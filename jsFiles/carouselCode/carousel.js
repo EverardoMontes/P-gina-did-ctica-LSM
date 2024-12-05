@@ -3,9 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".section");
   const dots = document.querySelectorAll(".dot");
   const menuButtons = document.querySelectorAll(".menuButton");
-  const prevBtn = document.getElementById("prevBtn");
+  const menuBtn = document.getElementById("menuBtn");
   const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
   const controls = document.getElementById("controles");
+  const nextContainer = document.getElementById("siguienteContenedor");
   let currentIndex = 0;
 
   //ESTA PARTE ENSEÑA EL PRINCIPIO PARA BUSCAR UNA SECCIÓN POR CLASE
@@ -19,6 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function ocultarBotones() {
     controls.style.display = "none";
   }
+  function actualizarBotones() {
+    if (currentIndex === sections.length - 1) {
+      nextBtn.style.display = "none";
+      nextContainer.style.display = "none";
+    } else {
+      nextBtn.style.display = "flex";
+      nextContainer.style.display = "flex";
+    }
+  }
 
   function showSection(index) {
     sections.forEach((section, i) => {
@@ -26,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       dots[i].classList.toggle("active", i === index);
     });
     controls.style.display = "flex";
+    actualizarBotones();
   }
 
   function nextSection() {
@@ -35,8 +47,14 @@ document.addEventListener("DOMContentLoaded", () => {
       top: 0,
     });
   }
-
   function prevSection() {
+    currentIndex = (currentIndex - 1) % sections.length;
+    showSection(currentIndex);
+    window.scrollTo({
+      top: 0,
+    });
+  }
+  function menuSection() {
     currentIndex = 0;
     showSection(currentIndex);
     window.scrollTo({
@@ -61,8 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  prevBtn.addEventListener("click", prevSection);
+  menuBtn.addEventListener("click", menuSection);
   nextBtn.addEventListener("click", nextSection);
+  prevBtn.addEventListener("click", prevSection);
 
   // Inicializar
   showSection(currentIndex);
